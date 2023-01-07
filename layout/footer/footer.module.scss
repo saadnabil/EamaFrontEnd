@@ -1,0 +1,173 @@
+@import '_variables';
+@import '_mixins';
+
+.footer :global {
+
+    .topFooter {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 1px;
+            background-color: $c-p;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-56%);
+            @include medium {
+                display: none;
+            }
+        }
+        .left {
+            background-color: #111111;
+            height: 100%;
+            width: 100%;
+            h2 {
+                color: #fff;
+                font-size: 60px;
+                font-weight: 800;
+                text-transform: uppercase;
+                line-height: 60px;
+                padding: 120px 0;
+            }
+
+        }
+
+        .right {
+            background: #0c0c0c;
+            height: 100%;
+            padding-top: 120px;
+
+            @include medium {
+                padding-bottom: 120px;
+            }
+
+            h3 {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            p {
+                color: #C1C1C1;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+
+        }
+    }
+
+    .secondFooter {
+        background-color: #000;
+        padding-bottom: 30px;
+        padding-top: 60px;
+        .footerHeading {
+            color: #ffffffe6;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .ant-row {
+            width: 100%;
+            margin-left: -10px;
+            margin-right: -10px;
+            padding: 50px 0;
+    
+        }
+
+        .logo {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            p {
+                color: #c1c1c1;
+            }
+        }
+    
+        .footerUl {
+            ul {
+                li {
+                    margin-bottom: 10px;
+    
+                    a {
+                        color: #c1c1c1;
+                        font-weight: 500;
+                        font-size: 14px;
+    
+                    }
+                }
+            }
+        }
+    
+    
+        .socail {
+            .ant-row {
+                padding: 0;
+                margin: 0;
+            }
+            .subscribe {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+                display: flex;
+                align-items: center;
+                .icon1 {
+                    color: rgba(255, 255, 255, 0.6)
+                }
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 0;
+                    color: #fff;
+                    box-shadow: none;
+                }
+
+                .icon2 {
+                    color: $c-p;
+                }
+            }
+            ul {
+                margin-top: 50px;
+
+                li {
+                    margin-right: 10px;
+                    a {
+                        color: #c1c1c1;
+                        font-size: 22px;    
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+    
+                }
+            }
+        }
+    
+        @media (max-width:991px) {
+            .logo {
+                justify-content: center;
+                display: flex;
+                margin-bottom: 35px;
+            }
+    
+            .socail {
+                margin-top: 28px;
+                padding-top: 26px;
+            }
+        }
+    }
+
+    .bottomFooter {
+        background: #111;
+        padding: 20px 0;
+        text-align: center;
+        color: #c1c1c1;
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,34 @@
+@import 'variables';
+
+.paginationS1 :global {
+
+  margin-bottom: 40px;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    li {
+        color: #999;
+        cursor: pointer;
+        &.active {
+          color: $c-p;
+          font-weight: bold;
+        }
+      }
+
+      .icon {
+          width: 30px;
+          height: 30px;
+          padding: 7px;
+          background-color: $c-p;
+          color: #fff;
+          border-radius: 5px;
+          font-weight: bold;
+          display: flex;
+          font-size: 18px;
+      }
+  }
+
+}

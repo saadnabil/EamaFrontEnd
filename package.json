@@ -1,0 +1,46 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^34.2.0",
+    "@ckeditor/ckeditor5-react": "^5.0.2",
+    "@reduxjs/toolkit": "^1.8.3",
+    "antd": "^4.21.5",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^0.27.2",
+    "framer-motion": "^7.6.19",
+    "google-map-react": "^2.2.0",
+    "next": "^12.3.4",
+    "next-redux-wrapper": "^7.0.5",
+    "next-translate": "^1.5.0",
+    "react": "18.2.0",
+    "react-animated-text-content": "^1.0.1",
+    "react-cookie": "^4.1.1",
+    "react-countup": "^6.4.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-modal-image": "^2.6.0",
+    "react-modal-video": "^1.2.10",
+    "react-redux": "^8.0.2",
+    "react-reveal": "^1.2.2",
+    "react-scroll-trigger": "^0.6.14",
+    "recharts": "^2.1.12",
+    "redux": "^4.2.0",
+    "sass": "^1.53.0",
+    "swiper": "^8.3.1"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.2.1",
+    "@types/node": "^18.0.1",
+    "@types/react": "^18.0.14",
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.0"
+  }
+}

@@ -1,0 +1,46 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+import { HYDRATE } from "next-redux-wrapper";
+
+const initialState = {
+  loading: false,
+  apiErrors: [],
+  blog: {},
+};
+
+export const getBlogPage = createAsyncThunk(
+  "blog/getBlogPage",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const data = await axios.get(`/blog-page?page=${payload}`);
+
+      return data.data;
+    } catch (error) {
+      return rejectWithValue(error.response);
+    }
+  }
+);
+
+export const glogSlice = createSlice({
+  name: "blog",
+  initialState,
+  reducers: {},
+  extraReducers: {
+    [getBlogPage.pending]: (state) => {
+      state.loading = true;
+    },
+
+    [getBlogPage.fulfilled]: (state, action) => {
+      state.blog = action?.payload.data;
+      state.loading = false;
+    },
+
+    [HYDRATE]: (state, action) => {
+      if (action.payload?.index?.blog) {
+        state.blog = action.payload;
+      }
+    },
+  },
+});
+
+export default glogSlice.reducer;

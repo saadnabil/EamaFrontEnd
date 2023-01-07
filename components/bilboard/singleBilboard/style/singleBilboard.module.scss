@@ -1,0 +1,24 @@
+@import '_variables';
+
+.singleBilboard :global {
+    .bilboards {
+        margin: 100px 0;
+        .bilboardContent {
+            margin-top: 30px;
+    
+            h1 {
+                font-size: 30px ;
+                margin-top: 40px;
+            }
+    
+            p {
+                line-height: 1.7;
+                margin-bottom: 20px;
+            }
+            .date {
+                color: $c-p;
+                font-weight: bold;
+            }
+        }
+    }
+}

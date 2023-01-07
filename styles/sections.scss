@@ -1,0 +1,527 @@
+@import "_variables";
+@import "_mixins";
+
+
+.userMenu {
+    width: 200px;
+
+    .ant-dropdown-menu-item {
+        padding: 14px;
+        font-size: 15px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #eaeaea;
+        }
+    }
+}
+
+.pageHeading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    background-size: cover;
+    background-position: center center;
+
+    .content {
+        position: relative;
+        z-index: 3;
+
+        .subTitle {
+            color: #fff;
+            text-transform: capitalize;
+            position: relative;
+            width: max-content;
+            margin: auto;
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: -50px;
+                top: 55%;
+                width: 40px;
+                height: 2px;
+                background-color: $c-p;
+                transform: translateY(-50%);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -50px;
+                top: 50%;
+                width: 40px;
+                height: 2px;
+                background-color: $c-p;
+                transform: translateY(-50%);
+            }
+        }
+
+        h1 {
+            margin: auto;
+            margin-top: 30px;
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            width: 68%;
+
+            @include medium {
+                width: 100%;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.expertSection  {
+    overflow: hidden;
+    .left {
+        padding: 0px 80px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+
+        &:hover {
+            .imageTransition {
+                transform: scale(1.2);
+            }
+        }
+
+        @include medium {
+            min-height: 500px;
+        }
+        
+        .cardContent {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 50px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+
+            h3 {
+                color: #fff;
+                font-size: 60px;
+                font-weight: 900;
+                text-transform: uppercase;
+                line-height: 1em;
+                text-align: right;
+                margin: 0;
+            }
+
+        }
+    }
+
+    .right {
+        padding: 60px 0px 60px 60px;
+        position: relative;
+        overflow: hidden;
+
+        @media (max-width: 787px) {
+            padding: 0;
+        }
+
+        &:hover {
+            .imageTransition {
+                transform: scale(1.2);
+            }
+        }
+
+        .cardContent {
+        position: relative;
+        height: 100%;
+        padding: 50px;
+        position: relative;
+        z-index: 1;
+
+        p {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 36px;
+            color: #fff;
+        }
+
+        .progress {
+            color: #fff;
+            margin-top: 30px;
+            .progres {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    }
+
+
+}
+
+.testimonialsSection {
+    margin: 100px 0;
+    .contentHeading {
+        display: flex;
+        margin-top: 60px;
+        .icon {
+            background: $c-p;
+            color: #fff;
+            font-size: 160px;
+            display: flex;
+            padding: 60px 180px 60px 40px;
+            min-height: 200px;
+            align-items: flex-end;
+
+             @include medium {
+                svg {
+                    display: none;
+                }
+            }
+        }
+
+        h3 {
+            margin: 50px 300px 0px -120px;
+            font-size: 60px;
+            line-height: 1;
+
+            @include small {
+                font-size: 30px;
+            }
+        }
+    }
+    .testimonialsSwiper {
+        margin-top: 60px;
+        .swiper-button-next,
+        .swiper-button-prev {
+            bottom: 0;
+            top: auto;
+            transition: .3s;
+    
+            &:hover {
+                background: $c-p;
+                color: #fff;
+            }
+        }
+    
+        .swiper-button-prev {
+            bottom: 0;
+            top: auto;
+            left: auto;
+            right: 40px;
+        }
+    
+            .swiper-button-next {
+            right: 0px;
+    
+        }
+        .customer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .imgContainer {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.ourTeamSection {
+    padding-top: 70px !important;
+    padding-bottom: 100px !important;
+    position: relative;
+    background-attachment: fixed;
+
+    .heading {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        .subTitle {
+            color: $c-p;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #fff;
+        }
+    }
+    .teamMember {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        height: 600px;
+        margin-bottom: 80px;
+
+        @include medium {
+            margin-top: 100px;
+        }
+
+        .image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+        .info {
+            text-align: center;
+            margin-top: 10px;
+            text-transform: uppercase;
+            width: 85%;
+            transition: .5s;
+            position: absolute;
+            bottom: -10%;
+
+            h3 {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 13px;
+                font-weight: 400;
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            .info {
+                background-color: $c-p;
+                padding: 45px;
+                bottom: 25px;
+            }
+        }
+    }
+
+    .ant-row {
+        @include medium {
+            justify-content: center;
+        }
+    }
+}
+
+.contactSection {
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    .contactContent {
+        background: #fff;
+        padding: 70px 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 8;
+
+        @include medium {
+            margin-top: 100px;
+        }
+
+        .subTitle {
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #161619;
+            margin: 20px 0 40px;
+            font-size: 50px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1em;
+
+            @include small {
+                font-size: 30px;
+            }
+        }
+
+        .ant-collapse {
+            border: none;
+
+            .ant-collapse-item {
+                border: none;
+                margin-bottom: 30px;
+
+                .ant-collapse-header {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .contactForm {
+        background: $c-p;
+        margin: 100px 0;
+        padding: 40px;
+        position: relative;
+        z-index: 8;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 37px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        input,
+        textarea,
+        .ant-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            box-shadow: none;
+            color: #fff;
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: none;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #fff;
+        }
+
+        .contactBtn {
+            border: 1px solid #fff;
+            margin-top: 30px;
+        }
+    }
+}
+
+.customersSection {
+    margin: 100px 0;
+
+    .heading {
+        margin-bottom: 30px;
+        h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    .customersSwiper {
+        .swiper-slide {
+            height: 100% !important;
+        }
+        .card {
+            opacity: .4;
+            transition: .5s;
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            background-size: cover;
+            background-position: center center;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.mainSwiper {
+    min-height: 300px;
+
+    .swiperCard {
+        height: 400px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #fff;
+    }
+}
+
+
+// header mobile menu
+.menuPageDrawer {
+  .menuPageHeader {
+    font-size: 30px;
+    padding: 20px 41px 0;
+    cursor: pointer;
+    color: $c-p;
+  }
+
+  .content {
+    margin-top: 40px;
+
+    ul {
+      li {
+        a {
+          padding: 20px 35px;
+          font-size: 15px;
+          font-weight: 600;
+          background: #fbfbfb;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+        }
+
+        &.active {
+          a {
+            &::before {
+              content: '';
+              border-right: 9px solid $c-p;
+              height: 100%;
+              width: 20px;
+              position: absolute;
+              right: 0;
+              border-radius: 7px;
+            }
+          }
+        }
+
+        .loginPage_ {
+          .ButtonsS1 {
+            width: 100%;
+
+            button {
+              width: 100%;
+              margin-top: 29px;
+              height: 45px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.imageTransition {
+    transition: .3s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center, center;
+    overflow: hidden;
+}

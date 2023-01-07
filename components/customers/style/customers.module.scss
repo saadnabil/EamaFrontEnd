@@ -1,0 +1,30 @@
+@import '_variables';
+
+.customers :global {
+    .customersSection {
+        .topHeading {
+            text-align: center;
+            .subTitle {
+                color: $c-p;
+                text-transform: uppercase;
+            }
+
+            
+        }
+        .customer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+
+            .content {
+                position: relative;
+                z-index: 1;
+
+                h3 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

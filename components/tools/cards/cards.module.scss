@@ -1,0 +1,98 @@
+@import '_variables';
+@import '_mixins';
+
+
+.servicesCard :global {
+
+
+    .card {
+        position: relative;
+        margin-bottom: 30px;
+        cursor: pointer;
+
+         &:hover {
+            .cardBg {
+                overflow: hidden;
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .cardBg {
+            position: relative;
+            min-height: 460px;
+
+            img {
+                transition: .5s;
+            }  
+      }
+
+        .content {
+            position: absolute;
+            background: #fff;
+            width: 80%;
+            bottom: 0;
+            right: 0;
+            padding: 50px 20px;
+
+            .title {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 28px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            .desc {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.blogCard :global{
+    margin-bottom: 70px;
+
+    .cardInfo {
+        @include medium {
+            margin-top: 30px;
+        }
+        .subTitle {
+            position: relative;
+            color: $c-p;
+            width: max-content;
+            margin-bottom: 20px;
+            font-weight: bold;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 4em;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                right: -5em;
+                border-style: solid;
+                border-width: 2px 0 0;
+            }
+        }
+
+        h3 {
+            font-weight: bolder;
+            font-size: 23px;
+            text-transform: capitalize;
+            transition: .3s;
+            cursor: pointer;
+
+            &:hover {
+                color: $c-p;
+            }
+        }
+
+        p {
+            line-height: 1.7em;
+            margin-bottom: 20px;
+        }
+    }
+}
