@@ -7,8 +7,6 @@ export const OurProjects_section = () => {
 
   const ourProjects = index.project_section;
 
-  console.log(index?.testimonial_section);
-
   return (
     <div className="ourProjectsSection">
       <div className="topHeading">

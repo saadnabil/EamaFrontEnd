@@ -41,6 +41,7 @@ export const indexSlice = createSlice({
 
     [HYDRATE]: (state, action) => {
       state.index = action.payload.index.index;
+      console.log(action.payload.index.index);
     },
   },
 });

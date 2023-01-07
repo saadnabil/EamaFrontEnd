@@ -18,9 +18,9 @@ export default function Home() {
   const { index } = useSelector(({ index }) => index);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(getIndexPage());
-  // }, []);
+  useEffect(() => {
+    dispatch(getIndexPage());
+  }, []);
 
   return (
     <section className={style.indexPage}>
@@ -29,10 +29,8 @@ export default function Home() {
         <OurServices_section />
         <SpringBanner_section />
         <OutDoor_section />
-
         <Exepert_section data={index.statistic_section_one} />
         <Progress_section />
-
         <OurProjects_section />
         <OurTeam_section data={index.team} titleData={index.team_section} />
         <Customers_section data={index?.client} />
