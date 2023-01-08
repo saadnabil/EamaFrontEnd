@@ -10,9 +10,9 @@ const initialState = {
 
 export const getBilboardPage = createAsyncThunk(
   "bilboard/getBilboardPage",
-  async (_, { rejectWithValue }) => {
+  async (payload, { rejectWithValue }) => {
     try {
-      const data = await axios.get("/billboard-page");
+      const data = await axios.get(`/billboard-page?page=${payload}`);
 
       return data.data;
     } catch (error) {
@@ -31,7 +31,7 @@ export const bilboardSlice = createSlice({
     },
 
     [getBilboardPage.fulfilled]: (state, action) => {
-      state.blog = action?.payload.data;
+      state.bilboard = action?.payload.data;
       state.loading = false;
     },
 

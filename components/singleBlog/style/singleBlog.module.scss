@@ -2,7 +2,6 @@
 @import '_mixins';
 
 .singleBlog :global {
-    margin-bottom: 60px;
     .blogContent {
         margin-top: 30px;
 
@@ -74,7 +73,7 @@
         position: relative;
         overflow: hidden;
         height: 400px;
-        margin: 40px 0;
+        margin: 40px 0 0;
         .showVideoBtn {
             position: absolute;
             width: 60px;

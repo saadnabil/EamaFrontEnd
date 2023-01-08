@@ -1,6 +1,10 @@
 import { Col, Row } from "antd";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getSingleBlogThunk } from "../../store/slices/blog/blogSlice";
 import { PageHeading_section } from "../tools/sections/pageHeading_section";
 import { MainSwiper } from "../tools/swiper/mainSwiper";
 import { BlogVideo_section } from "./sections/blogVideo_section";
@@ -8,6 +12,13 @@ import { RelatedBlog_section } from "./sections/relatedBlog_section";
 import style from "./style/singleBlog.module.scss";
 
 export const SingleBlogComponent = () => {
+  const { singleBlog } = useSelector(({ blog }) => blog);
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  useEffect(() => {
+    dispatch(getSingleBlogThunk(router.query.blogId));
+  }, []);
   const data = {
     id: 1,
     subTitle: "REAL ESTATE",
@@ -28,7 +39,7 @@ export const SingleBlogComponent = () => {
 
   return (
     <div className={style.singleBlog}>
-      <PageHeading_section />
+      <PageHeading_section data={singleBlog?.cover_section} />
       <div className="container_">
         <Row gutter={30}>
           <Col xs={24} lg={12}>

@@ -1,6 +1,3 @@
-import Image from "next/image";
-import React from "react";
-
 export const PageHeading_section = ({ data }) => {
   return (
     <div

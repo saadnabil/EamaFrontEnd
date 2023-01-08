@@ -3,6 +3,7 @@ import { createWrapper } from "next-redux-wrapper";
 import aboutSlice from "./slices/about/aboutSlice";
 //
 import authSlice from "./slices/auth/authSlice";
+import bilboardSlice from "./slices/bilboard/bilboardSlice";
 import blogSlice from "./slices/blog/blogSlice";
 import careersSlice from "./slices/careers/careersSlice";
 import contactSlice from "./slices/contact/contactSlice";
@@ -21,6 +22,7 @@ const makeStore = () =>
       careers: careersSlice,
       blog: blogSlice,
       contact: contactSlice,
+      bilboard: bilboardSlice,
     },
     devTools: true,
   });

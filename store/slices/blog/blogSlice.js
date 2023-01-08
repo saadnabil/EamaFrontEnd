@@ -6,6 +6,7 @@ const initialState = {
   loading: false,
   apiErrors: [],
   blog: {},
+  singleBlog: {},
 };
 
 export const getBlogPage = createAsyncThunk(
@@ -13,6 +14,19 @@ export const getBlogPage = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const data = await axios.get(`/blog-page?page=${payload}`);
+
+      return data.data;
+    } catch (error) {
+      return rejectWithValue(error.response);
+    }
+  }
+);
+
+export const getSingleBlogThunk = createAsyncThunk(
+  "blog/getSingleBlogThunk",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const data = await axios.get(`/blog/${payload}`);
 
       return data.data;
     } catch (error) {
@@ -32,6 +46,15 @@ export const glogSlice = createSlice({
 
     [getBlogPage.fulfilled]: (state, action) => {
       state.blog = action?.payload.data;
+      state.loading = false;
+    },
+
+    [getSingleBlogThunk.pending]: (state) => {
+      state.loading = true;
+    },
+
+    [getSingleBlogThunk.fulfilled]: (state, action) => {
+      state.singleBlog = action?.payload.data;
       state.loading = false;
     },
 
