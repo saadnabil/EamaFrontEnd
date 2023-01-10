@@ -1,5 +1,5 @@
 const path = require("path");
-
+const allUrl = require("./settings/allUrl.json");
 const nextTranslate = require("next-translate");
 
 module.exports = nextTranslate({
@@ -10,7 +10,7 @@ module.exports = nextTranslate({
   },
 
   images: {
-    domains: ["admin.eama.site"],
+    domains: allUrl.imagesUrl,
   },
 
   rules: [
