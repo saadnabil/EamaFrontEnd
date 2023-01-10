@@ -18,9 +18,9 @@ export const SingleBilboardComponent = () => {
   console.log(singleBilboard);
 
   const data = {
-    title: singleBilboard.subtitle,
-    image: singleBilboard.cover,
-    description: singleBilboard.title,
+    title: singleBilboard.billboard?.subtitle,
+    image: singleBilboard.billboard?.cover,
+    description: singleBilboard.billboard?.title,
   };
 
   // const data = {
@@ -47,13 +47,13 @@ export const SingleBilboardComponent = () => {
         <Row gutter={30}>
           <Col xs={24} lg={12}>
             <div className="bilboardContent">
-              <h1 className="mainHeading">{singleBilboard.title}</h1>
-              <p>{singleBilboard.description}</p>
-              <p className="date">11 / 12 / 2022</p>
+              <h1 className="mainHeading">{singleBilboard.billboard?.title}</h1>
+              <p>{singleBilboard.billboard?.description}</p>
+              <p className="date">{singleBilboard.billboard?.date}</p>
             </div>
           </Col>
           <Col xs={24} lg={12}>
-            <MainSwiper images={singleBilboard.images} />
+            <MainSwiper images={singleBilboard.billboard?.images} />
           </Col>
         </Row>
       </div>

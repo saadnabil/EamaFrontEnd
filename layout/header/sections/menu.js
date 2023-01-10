@@ -80,7 +80,7 @@ const Menue = () => {
               </li>
 
               <li
-                className={router.pathname === "/blog" ? "active" : ""}
+                className={router.pathname.includes("/blog") ? "active" : ""}
                 onClick={onClose}
               >
                 <Link href="/blog">
@@ -88,7 +88,9 @@ const Menue = () => {
                 </Link>
               </li>
               <li
-                className={router.pathname === "/bilboard" ? "active" : ""}
+                className={
+                  router.pathname.includes("/bilboard") ? "active" : ""
+                }
                 onClick={onClose}
               >
                 <Link href="/bilboard">

@@ -7,8 +7,8 @@ import "@styles/globals.scss";
 
 import LayoutApp from "../layout/layout";
 import { wrapper } from "../store/store";
-import SetApp from "../layout/setApp";
 import { CookiesProvider } from "react-cookie";
+import SetApp from "../settings/setApp";
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -6,6 +6,7 @@ import { InboxOutlined } from "@ant-design/icons";
 import { careerFormThunk } from "../../../store/slices/careers/careersSlice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import allUrl from "../../../settings/allUrl.json";
 
 export const Careers_form = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export const Careers_form = () => {
 
   const props = {
     name: "cv",
-    action: `https://admin.eama.site/api/v1/upload-cv`,
+    action: `${allUrl.apiUrl}/upload-cv`,
     headers: {
       authorization: "authorization-text",
     },
@@ -36,7 +37,7 @@ export const Careers_form = () => {
       }
       if (info.file.status === "done") {
         setCvId(info.file.response.id);
-        message.info(`${info.file.name} uploaded.`);
+        message.success(`${info.file.name} uploaded.`);
       } else if (info.file.status === "error") {
         message.error(`${info.file.name} file upload failed.`);
       }

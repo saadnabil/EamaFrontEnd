@@ -18,12 +18,11 @@ export const SingleBlogComponent = () => {
   useEffect(() => {
     dispatch(getSingleBlogThunk(router.query.blogId));
   }, []);
-  console.log(singleBlog.images);
 
   const data = {
-    title: singleBlog.subtitle,
-    image: singleBlog.cover,
-    description: singleBlog.title,
+    title: singleBlog.blog?.subtitle,
+    image: singleBlog.blog?.cover,
+    description: singleBlog.blog?.title,
   };
   // const data = {
   //   id: 1,
@@ -50,13 +49,13 @@ export const SingleBlogComponent = () => {
         <Row gutter={30}>
           <Col xs={24} lg={12}>
             <div className="blogContent">
-              <h1 className="mainHeading">{data.title}</h1>
-              <p>{data.description}</p>
-              <p className="date">11 / 12 / 2022</p>
+              <h1 className="mainHeading">{singleBlog.blog?.title}</h1>
+              <p>{singleBlog.blog?.description}</p>
+              <p className="date">{singleBlog.blog?.date}</p>
             </div>
           </Col>
           <Col xs={24} lg={12}>
-            <MainSwiper images={singleBlog.images} />
+            <MainSwiper images={singleBlog.blog?.images} />
           </Col>
         </Row>
         <RelatedBlog_section />

@@ -61,12 +61,16 @@ function HeaderApp() {
                 </Link>
               </li>
 
-              <li className={router.pathname === "/blog" ? "active" : ""}>
+              <li className={router.pathname.includes("/blog") ? "active" : ""}>
                 <Link href="/blog">
                   <a>blog</a>
                 </Link>
               </li>
-              <li className={router.pathname === "/bilboard" ? "active" : ""}>
+              <li
+                className={
+                  router.pathname.includes("/bilboard") ? "active" : ""
+                }
+              >
                 <Link href="/bilboard">
                   <a>Billboards' locations</a>
                 </Link>
