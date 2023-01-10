@@ -6,6 +6,7 @@ const initialState = {
   loading: false,
   apiErrors: [],
   bilboard: {},
+  singleBilboard: {},
 };
 
 export const getBilboardPage = createAsyncThunk(
@@ -13,6 +14,19 @@ export const getBilboardPage = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const data = await axios.get(`/billboard-page?page=${payload}`);
+
+      return data.data;
+    } catch (error) {
+      return rejectWithValue(error.response);
+    }
+  }
+);
+
+export const getSingleBilboard = createAsyncThunk(
+  "bilboard/getSingleBilboard",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const data = await axios.get(`/billboard/${payload}`);
 
       return data.data;
     } catch (error) {
@@ -35,6 +49,14 @@ export const bilboardSlice = createSlice({
       state.loading = false;
     },
 
+    [getSingleBilboard.pending]: (state) => {
+      state.loading = true;
+    },
+
+    [getSingleBilboard.fulfilled]: (state, action) => {
+      state.singleBilboard = action?.payload.data;
+      state.loading = false;
+    },
     [HYDRATE]: (state, action) => {
       if (action.payload?.index?.blog) {
         state.blog = action.payload;

@@ -1,5 +1,4 @@
 import { Col, Row } from "antd";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { useEffect } from "react";
@@ -19,27 +18,34 @@ export const SingleBlogComponent = () => {
   useEffect(() => {
     dispatch(getSingleBlogThunk(router.query.blogId));
   }, []);
+  console.log(singleBlog.images);
+
   const data = {
-    id: 1,
-    subTitle: "REAL ESTATE",
-    title: "Luxury designer penthouse",
-    description:
-      "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id, Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id, Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id,",
-    images: [
-      { id: 1, url: "/photos/home/headSection/1.jpg" },
-      { id: 2, url: "/photos/home/headSection/1.jpg" },
-      { id: 3, url: "/photos/home/headSection/1.jpg" },
-    ],
-    relatedBlogs: [
-      { id: 1, url: "/photos/home/headSection/1.jpg" },
-      { id: 2, url: "/photos/home/headSection/1.jpg" },
-    ],
-    videoUrl: "http://www.youtube.com/watch",
+    title: singleBlog.subtitle,
+    image: singleBlog.cover,
+    description: singleBlog.title,
   };
+  // const data = {
+  //   id: 1,
+  //   subTitle: "REAL ESTATE",
+  //   title: "Luxury designer penthouse",
+  //   description:
+  //     "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id, Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id, Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id,",
+  //   images: [
+  //     { id: 1, url: "/photos/home/headSection/1.jpg" },
+  //     { id: 2, url: "/photos/home/headSection/1.jpg" },
+  //     { id: 3, url: "/photos/home/headSection/1.jpg" },
+  //   ],
+  //   relatedBlogs: [
+  //     { id: 1, url: "/photos/home/headSection/1.jpg" },
+  //     { id: 2, url: "/photos/home/headSection/1.jpg" },
+  //   ],
+  //   videoUrl: "http://www.youtube.com/watch",
+  // };
 
   return (
     <div className={style.singleBlog}>
-      <PageHeading_section data={singleBlog?.cover_section} />
+      <PageHeading_section data={data} />
       <div className="container_">
         <Row gutter={30}>
           <Col xs={24} lg={12}>
@@ -50,7 +56,7 @@ export const SingleBlogComponent = () => {
             </div>
           </Col>
           <Col xs={24} lg={12}>
-            <MainSwiper images={data.images} />
+            <MainSwiper images={singleBlog.images} />
           </Col>
         </Row>
         <RelatedBlog_section />

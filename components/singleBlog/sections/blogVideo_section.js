@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React from "react";
 import { useState } from "react";
-import { GrFacebookOption } from "react-icons/gr";
+import { BsFillPlayFill } from "react-icons/bs";
 import ModalVideo from "react-modal-video";
 
 export const BlogVideo_section = () => {
@@ -16,7 +15,7 @@ export const BlogVideo_section = () => {
         layout="responsive"
       />
       <div className="showVideoBtn" onClick={() => setOpen(true)}>
-        <GrFacebookOption />
+        <BsFillPlayFill />
       </div>
       <ModalVideo
         channel="youtube"
