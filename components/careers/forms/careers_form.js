@@ -7,6 +7,7 @@ import { careerFormThunk } from "../../../store/slices/careers/careersSlice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import allUrl from "../../../settings/allUrl.json";
+const Option = Select;
 
 export const Careers_form = () => {
   const dispatch = useDispatch();
