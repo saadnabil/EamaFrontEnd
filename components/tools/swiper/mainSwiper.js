@@ -21,7 +21,7 @@ export const MainSwiper = ({ images }) => {
       >
         {images?.map((image) => (
           <SwiperSlide key={image.id}>
-            <div className="swiperCard overlay">
+            <div className="swiperCard ">
               <div className="imgContainer">
                 <Image
                   src={image?.image}
