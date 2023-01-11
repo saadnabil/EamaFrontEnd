@@ -7,7 +7,7 @@ export const Exepert_section = ({ data }) => {
     <div className="expertSection">
       <Row>
         <Col xs={24} lg={12}>
-          <div className="left overlay">
+          <div className="left">
             <div
               className="imageTransition"
               style={{ backgroundImage: `url(${data?.image_one})` }}
