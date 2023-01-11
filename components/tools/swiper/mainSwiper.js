@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import Image from "next/image";
-import ModalImage from "react-modal-image";
 
 export const MainSwiper = ({ images }) => {
   return (

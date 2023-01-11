@@ -26,7 +26,7 @@ export const BilboardComponent = () => {
       <div className="container_">
         {bilboard.billboards?.data.map((blog, i) => (
           <Fade bottom>
-            <BlogCard_section data={blog} dir={i} />
+            <BlogCard_section data={blog} dir={i} type="bilboard" />
           </Fade>
         ))}
       </div>

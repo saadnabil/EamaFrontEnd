@@ -4,7 +4,7 @@ import { MainSwiper } from "../swiper/mainSwiper";
 import style from "./cards.module.scss";
 import ButtonsS1 from "../buttons/buttonsS1";
 
-const BlogCard_section = ({ data, dir }) => {
+const BlogCard_section = ({ data, dir, type }) => {
   return (
     <div className={style.blogCard}>
       <Row
@@ -17,7 +17,7 @@ const BlogCard_section = ({ data, dir }) => {
         <Col xs={24} lg={12}>
           <div className="cardInfo">
             <div className="subTitle">{data?.subtitle}</div>
-            <Link href={`/blog/${data?.id}`}>
+            <Link href={`/${type}/${data?.id}`}>
               <h3>{data?.title}</h3>
             </Link>
             <p>{data?.description}</p>

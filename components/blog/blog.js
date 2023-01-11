@@ -25,7 +25,7 @@ export const BlogComponent = () => {
       <div className="container_">
         {blog.blogs?.data.map((blog, i) => (
           <Fade bottom>
-            <BlogCard_section data={blog} dir={i} />
+            <BlogCard_section data={blog} dir={i} type="blog" />
           </Fade>
         ))}
       </div>
