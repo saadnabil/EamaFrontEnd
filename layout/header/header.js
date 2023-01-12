@@ -37,12 +37,12 @@ function HeaderApp() {
               </li>
               <li className={router.pathname === "/about" ? "active" : ""}>
                 <Link href="/about">
-                  <a>About</a>
+                  <a>Why Eama</a>
                 </Link>
               </li>
               <li className={router.pathname === "/customers" ? "active" : ""}>
                 <Link href="/customers">
-                  <a>customers</a>
+                  <a>Our Clients</a>
                 </Link>
               </li>
               <li
@@ -51,19 +51,24 @@ function HeaderApp() {
                 }
               >
                 <Link href="/request-qutation">
-                  <a>request qutation</a>
+                  <a>Request Qutation</a>
                 </Link>
               </li>
 
               <li className={router.pathname === "/careers" ? "active" : ""}>
                 <Link href="/careers">
-                  <a>careers</a>
+                  <a>Careers</a>
                 </Link>
               </li>
 
               <li className={router.pathname.includes("/blog") ? "active" : ""}>
                 <Link href="/blog">
-                  <a>blog</a>
+                  <a>Our Blog</a>
+                </Link>
+              </li>
+              <li className={router.pathname === "/contact-us" ? "active" : ""}>
+                <Link href="/contact-us">
+                  <a>News</a>
                 </Link>
               </li>
               <li
@@ -72,15 +77,16 @@ function HeaderApp() {
                 }
               >
                 <Link href="/bilboard">
-                  <a>Billboards' locations</a>
+                  <a>Our Locations</a>
                 </Link>
               </li>
 
               <li className={router.pathname === "/contact-us" ? "active" : ""}>
                 <Link href="/contact-us">
-                  <a>CONTACT</a>
+                  <a>Contact Us</a>
                 </Link>
               </li>
+              
             </ul>
             {/* <ul className="flex_ social">
               <li>

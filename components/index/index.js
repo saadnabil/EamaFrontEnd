@@ -27,13 +27,13 @@ export default function Home() {
       <div className=" indexPage_">
         <HeadSection />
         <OurServices_section />
-        <SpringBanner_section />
+        {/* <SpringBanner_section /> */}
         <OutDoor_section />
         <Exepert_section data={index.statistic_section_one} />
         <Progress_section />
         <OurProjects_section />
         <OurTeam_section data={index.team} titleData={index.team_section} />
-        <Customers_section data={index?.client} />
+        {/* <Customers_section data={index?.client} /> */}
         <LastNews_section data={index.blog} titleData={index.blog_section} />
         <Contact_section data={index.faq_section} />
       </div>

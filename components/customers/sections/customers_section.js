@@ -14,11 +14,11 @@ export const Customers_section = () => {
       <Row>
         {customers.client?.map((customer) => (
           <Col xs={24} sm={12} lg={6} key={customer.id}>
-            <div className="customer overlay">
+            <div className="customer ">
               <Image src={customer.image} layout="fill" />
-              <div className="content">
+              {/* <div className="content">
                 <h3>{customer.title}</h3>
-              </div>
+              </div> */}
             </div>
           </Col>
         ))}

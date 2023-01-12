@@ -48,7 +48,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/about">
-                  <a>About</a>
+                  <a>Why Eama</a>
                 </Link>
               </li>
               <li
@@ -56,7 +56,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/customers">
-                  <a>customers</a>
+                  <a>Our Clients</a>
                 </Link>
               </li>
               <li
@@ -66,7 +66,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/request-qutation">
-                  <a>request qutation</a>
+                  <a>Request Quotation</a>
                 </Link>
               </li>
 
@@ -75,7 +75,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/careers">
-                  <a>careers</a>
+                  <a>Careers</a>
                 </Link>
               </li>
 
@@ -84,7 +84,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/blog">
-                  <a>blog</a>
+                  <a>Our Blog</a>
                 </Link>
               </li>
               <li
@@ -94,7 +94,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/bilboard">
-                  <a>Billboards' locations</a>
+                  <a>Our Locations</a>
                 </Link>
               </li>
 
@@ -103,7 +103,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/contact-us">
-                  <a>CONTACT</a>
+                  <a>Contact Us</a>
                 </Link>
               </li>
             </ul>

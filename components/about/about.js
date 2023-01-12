@@ -25,7 +25,7 @@ export const AboutComponent = () => {
     <div className={style.about}>
       <PageHeading_section data={about.cover_section} />
       <WhoAreYou_section />
-      <Numbers_section />
+      {/* <Numbers_section />
       <Exepert_section data={about.statistic_section_one} />
       <div className="container_">
         <Testimonials_section
@@ -34,7 +34,7 @@ export const AboutComponent = () => {
         />
       </div>
       <OurTeam_section data={about.team} titleData={about.team_section} />
-      <Contact_section data={about.faq_section} />
+      <Contact_section data={about.faq_section} /> */}
       <Customers_section data={about.client} />
     </div>
   );
