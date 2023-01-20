@@ -1,0 +1,37 @@
+.bilboard :global {
+    margin-bottom: 100px;
+     .bilboardCard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                .content {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 0;
+                }
+            }
+
+             &::after {
+                transition: .3s;
+            }
+
+            .content {
+                position: relative;
+                z-index: 1;
+                transition: .1s;
+
+                h3 {
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+            }
+        }
+}

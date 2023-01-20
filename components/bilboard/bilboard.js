@@ -1,10 +1,13 @@
+import { Col, Row } from "antd";
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Fade } from "react-reveal";
 import { getBilboardPage } from "../../store/slices/bilboard/bilboardSlice";
 import BlogCard_section from "../tools/cards/blogCard_section";
-import { PaginationS1 } from "../tools/pagination/paginationS1";
 import { PageHeading_section } from "../tools/sections/pageHeading_section";
+import style from "./style/bilboard.module.scss";
 
 export const BilboardComponent = () => {
   const { bilboard } = useSelector(({ bilboard }) => bilboard);
@@ -16,24 +19,25 @@ export const BilboardComponent = () => {
 
   console.log(bilboard);
 
-  const changePagination = (url) => {
-    dispatch(getBilboardPage(url.split("?page=")[1]));
-  };
-
   return (
-    <div>
+    <div className={style.bilboard}>
       <PageHeading_section data={bilboard.cover_section} />
       <div className="container_">
-        {bilboard.billboards?.data.map((blog, i) => (
-          <Fade bottom>
-            <BlogCard_section data={blog} dir={i} type="bilboard" />
-          </Fade>
-        ))}
+        <Row>
+          {bilboard.billboards?.data.map((bilboard, i) => (
+            <Col xs={24} sm={12} lg={8} key={bilboard.id}>
+              <Link href={`/bilboard/${bilboard.id}`}>
+                <div className="bilboardCard overlay">
+                  <Image src={bilboard.cover} layout="fill" />
+                  <div className="content">
+                    <h3>{bilboard.title}</h3>
+                  </div>
+                </div>
+              </Link>
+            </Col>
+          ))}
+        </Row>
       </div>
-      <PaginationS1
-        links={bilboard.billboards?.meta.links}
-        changePagination={changePagination}
-      />
     </div>
   );
 };

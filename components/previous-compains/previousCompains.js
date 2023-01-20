@@ -1,51 +1,32 @@
-import React from "react";
 import { PageHeading_section } from "../tools/sections/pageHeading_section";
-import { Fade } from "react-reveal";
-import BlogCard_section from "../tools/cards/blogCard_section";
+import { PreviousComapinsCard_section } from "./sections/priviousComapinsCard_section";
+import { Col, Row } from "antd";
+import style from "./style/previousCompains.module.scss";
 
 export const PreviousCompainsComponent = () => {
   const data = {
     id: 1,
-    subTitle: "REAL ESTATE",
-    dir: "ltr",
-    title: "Luxury designer penthouse",
-    description:
-      "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id,",
-    images: [
-      { id: 1, url: "/photos/home/headSection/1.jpg" },
-      { id: 2, url: "/photos/home/headSection/1.jpg" },
-      { id: 3, url: "/photos/home/headSection/1.jpg" },
-    ],
+    title: "Dejavu",
+    date: "2020",
+    cover: "/photos/home/bg.png",
     pdfLink: "http://www.",
   };
 
-  const data2 = {
-    id: 1,
-    subTitle: "REAL ESTATE",
-    dir: "rtl",
-    title: "Luxury designer penthouse",
-    description:
-      "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. User generated content in real-time. Fusce rhoncus sapien ultrices, porttitor lectus id,",
-    images: [
-      { id: 1, url: "/photos/home/headSection/1.jpg" },
-      { id: 2, url: "/photos/home/headSection/1.jpg" },
-      { id: 3, url: "/photos/home/headSection/1.jpg" },
-    ],
-    pdfLink: "http://www.",
-  };
   return (
-    <div>
+    <div className={style.previousCompains}>
       <PageHeading_section />
       <div className="container_">
-        <Fade bottom>
-          <BlogCard_section data={data} />
-        </Fade>
-        <Fade bottom>
-          <BlogCard_section data={data2} />
-        </Fade>
-        <Fade bottom>
-          <BlogCard_section data={data} />
-        </Fade>
+        <Row gutter={30}>
+          <Col xs={24} lg={8}>
+            <PreviousComapinsCard_section data={data} />
+          </Col>
+          <Col xs={24} lg={8}>
+            <PreviousComapinsCard_section data={data} />
+          </Col>
+          <Col xs={24} lg={8}>
+            <PreviousComapinsCard_section data={data} />
+          </Col>
+        </Row>
       </div>
     </div>
   );

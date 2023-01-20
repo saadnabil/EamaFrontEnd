@@ -1,0 +1,22 @@
+@import '_variables';
+
+.previousCompains :global {
+    margin-bottom: 100px;
+    .previousComapinsCard {
+        .content {
+            margin: 20px 0;
+            h2 {
+                font-weight: bold;
+                font-size: 40px;
+                color: $c-p;
+            }
+
+            .date {
+                color: $c-p;
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+    }
+}

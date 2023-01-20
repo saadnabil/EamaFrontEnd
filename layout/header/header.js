@@ -32,7 +32,7 @@ function HeaderApp() {
             <ul className="flex__ header_sec2">
               <li className={router.pathname === "/" ? "active" : ""}>
                 <Link href="/">
-                  <a>hHome</a>
+                  <a>Home</a>
                 </Link>
               </li>
               <li className={router.pathname === "/about" ? "active" : ""}>
@@ -66,9 +66,18 @@ function HeaderApp() {
                   <a>Our Blog</a>
                 </Link>
               </li>
-              <li className={router.pathname === "/contact-us" ? "active" : ""}>
-                <Link href="/contact-us">
-                  <a>Newssss</a>
+              <li className={router.pathname === "/news" ? "active" : ""}>
+                <Link href="/news">
+                  <a>News</a>
+                </Link>
+              </li>
+              <li
+                className={
+                  router.pathname === "/previous-compains" ? "active" : ""
+                }
+              >
+                <Link href="/previous-compains">
+                  <a>previous compains</a>
                 </Link>
               </li>
               <li

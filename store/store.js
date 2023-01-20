@@ -9,6 +9,8 @@ import careersSlice from "./slices/careers/careersSlice";
 import contactSlice from "./slices/contact/contactSlice";
 import customersSlice from "./slices/customers/customersSlice";
 import indexSlice from "./slices/index/indexSlice";
+import getNewsSlice from "./slices/news/news";
+import previousCompainsSlice from "./slices/previousCompains/previousCompains";
 import quotationSlice from "./slices/quotation/quotationSlice";
 
 const makeStore = () =>
@@ -23,6 +25,8 @@ const makeStore = () =>
       blog: blogSlice,
       contact: contactSlice,
       bilboard: bilboardSlice,
+      news: getNewsSlice,
+      previousCompains: previousCompainsSlice,
     },
     devTools: true,
   });
