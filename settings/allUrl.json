@@ -1,5 +1,5 @@
 {
-  "apiUrl": "http://127.0.0.1:8000/api/v1",
-  "UnAuthorizationRedirectUr": "https://bshopa.com/",
+  "apiUrl": "https://admin.eama.site/api/v1",
+  "UnAuthorizationRedirectUr": "https://eama.site/",
   "imagesUrl": ["127.0.0.1", "admin.eama.site"]
 }
