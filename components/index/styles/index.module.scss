@@ -11,17 +11,22 @@
 
         @include medium {
             margin-bottom: 40px;
+            min-height: 60vh;
         }
 
         .headSwiper {
             height: 150vh;
-
+            @include medium {
+                margin-bottom: 40px;
+                height: 60vh;
+            }
             .swiper {
                 height: 100%;
                 .swiperCard {
                     height: 100%;
                     display: flex;
                     align-items: center;
+                    justify-content: center;
 
                     &::after {
                         background:  linear-gradient(to right, #000000 0%, rgb(0 0 0 / 95%) 50%, rgb(56 3 3 / 50%) 100%);
@@ -62,6 +67,7 @@
                                 font-size: 50px;
                                 line-height: 60px;
                                 width: 100%;
+                                margin-bottom: 15px;
                             }
 
                             @include small {
@@ -391,6 +397,10 @@
                 position: relative;
                 background-size: cover;
                 background-position: center center;
+
+                @include medium {
+                    min-height: 300px;
+                }
             }
         }
     }

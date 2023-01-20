@@ -1,4 +1,4 @@
-import { Col, Form, Input, Layout, Row } from "antd";
+import { Col, Form, Input, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import style from "./footer.module.scss";
@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import { GrFacebookOption } from "react-icons/gr";
 import { FiSend } from "react-icons/fi";
-import { BsArrowRight, BsEnvelope } from "react-icons/bs";
+import { BsEnvelope } from "react-icons/bs";
 
 export default function Footer() {
   const onFinish = (values) => {
@@ -179,7 +179,7 @@ export default function Footer() {
             </Col>
           </Row>
         </div>
-        <div className="bottomFooter">© 2022, EMMA. All rights reserved</div>
+        <div className="bottomFooter">© 2022, Eama. All rights reserved</div>
       </footer>
     </>
   );

@@ -17,23 +17,7 @@ export const Contact_section = ({ data }) => {
           <div className="contactContent">
             <span className="subTitle">{data?.subtitle}</span>
             <h2 className="mainHeading">{data?.title}</h2>
-            <Collapse defaultActiveKey={[1]} onChange={onChange} accordion>
-              <Panel header="This is panel header 1" key={1}>
-                <p>{data?.description} </p>
-              </Panel>
-              <Panel header="This is panel header 2" key={2}>
-                <p>
-                  it can be found as a welcome guest in many households across
-                  the world.
-                </p>
-              </Panel>
-              <Panel header="This is panel header 3" key={3}>
-                <p>
-                  it can be found as a welcome guest in many households across
-                  the world.
-                </p>
-              </Panel>
-            </Collapse>
+            <p>{data?.description}</p>
           </div>
         </Col>
         <Col xs={24} lg={12}>
