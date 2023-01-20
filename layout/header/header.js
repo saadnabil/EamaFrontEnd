@@ -68,7 +68,7 @@ function HeaderApp() {
               </li>
               <li className={router.pathname === "/contact-us" ? "active" : ""}>
                 <Link href="/contact-us">
-                  <a>News</a>
+                  <a>Newssss</a>
                 </Link>
               </li>
               <li
