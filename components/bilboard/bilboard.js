@@ -23,7 +23,7 @@ export const BilboardComponent = () => {
     <div className={style.bilboard}>
       <PageHeading_section data={bilboard.cover_section} />
       <div className="container_">
-        <Row>
+        <Row gutter={20}>
           {bilboard.billboards?.data.map((bilboard, i) => (
             <Col xs={24} sm={12} lg={8} key={bilboard.id}>
               <Link href={`/bilboard/${bilboard.id}`}>
