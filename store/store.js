@@ -9,6 +9,7 @@ import careersSlice from "./slices/careers/careersSlice";
 import contactSlice from "./slices/contact/contactSlice";
 import customersSlice from "./slices/customers/customersSlice";
 import indexSlice from "./slices/index/indexSlice";
+import getLayoutSlice from "./slices/layout/getLayoutSlice";
 import getNewsSlice from "./slices/news/news";
 import previousCompainsSlice from "./slices/previousCompains/previousCompains";
 import quotationSlice from "./slices/quotation/quotationSlice";
@@ -27,6 +28,7 @@ const makeStore = () =>
       bilboard: bilboardSlice,
       news: getNewsSlice,
       previousCompains: previousCompainsSlice,
+      layout: getLayoutSlice,
     },
     devTools: true,
   });

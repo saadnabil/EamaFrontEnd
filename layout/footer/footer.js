@@ -10,8 +10,20 @@ import {
 import { GrFacebookOption } from "react-icons/gr";
 import { FiSend } from "react-icons/fi";
 import { BsEnvelope } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import { getLayoutFooter } from "../../store/slices/layout/getLayoutSlice";
+import { useEffect } from "react";
 
 export default function Footer() {
+  const { footer } = useSelector(({ layout }) => layout);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getLayoutFooter());
+  }, []);
+
+  console.log(footer);
+
   const onFinish = (values) => {
     console.log("Success:", values);
   };
@@ -31,12 +43,9 @@ export default function Footer() {
             <Col xs={24} lg={12}>
               <div className="right container_">
                 <h3>CONTACT US</h3>
-                <p>(+68) 120034509</p>
-                <p>info@yourdomain.com</p>
-                <p>
-                  005 Stokes Isle Apt. 896, <br />
-                  enaville 10010, USA
-                </p>
+                {footer.contact?.map((item) => (
+                  <p key={item.id}>{item.value}</p>
+                ))}
               </div>
             </Col>
           </Row>
@@ -51,7 +60,7 @@ export default function Footer() {
                   </a>
                 </Link>
                 <p>
-                  © Copyrights 2021 Outmedia <br />
+                  © Copyrights 2023 Eama <br />
                   All rights reserved.
                 </p>
               </div>
@@ -143,37 +152,25 @@ export default function Footer() {
                   </Form.Item>
                 </Form>
                 <ul className="flex_">
-                  <li>
-                    <Link href="/">
-                      <a>
-                        <GrFacebookOption />
-                      </a>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link href="/">
-                      <a>
-                        <AiOutlineTwitter />
-                      </a>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link href="/">
-                      <a>
-                        <AiFillYoutube />
-                      </a>
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link href="/">
-                      <a>
-                        <AiFillInstagram />
-                      </a>
-                    </Link>
-                  </li>
+                  {footer.socialmedia?.map((item) => (
+                    <li key={item.id}>
+                      <Link href={item.link}>
+                        <a>
+                          {item.type === "facebook" ? (
+                            <GrFacebookOption />
+                          ) : item.type === "twitter" ? (
+                            <AiOutlineTwitter />
+                          ) : item.type === "youtube" ? (
+                            <AiFillYoutube />
+                          ) : item.type === "Instagram" ? (
+                            <AiFillInstagram />
+                          ) : (
+                            ""
+                          )}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </Col>
