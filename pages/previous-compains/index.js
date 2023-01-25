@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { PreviousCompainsComponent } from "../components/previous-compains/previousCompains";
+import { PreviousCompainsComponent } from "../../components/previous-compains/previousCompains";
 
 const PreviousCompainsPage = () => {
   return (

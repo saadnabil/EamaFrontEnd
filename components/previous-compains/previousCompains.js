@@ -17,30 +17,17 @@ export const PreviousCompainsComponent = () => {
   }, []);
 
   console.log(previousCompains);
-  const data = {
-    id: 1,
-    title: "Dejavu",
-    date: "2020",
-    cover: "/photos/home/bg.png",
-    pdfLink: "http://www.",
-  };
 
   return (
     <div className={style.previousCompains}>
       <PageHeading_section data={previousCompains.cover_section} />
       <div className="container_">
         <Row gutter={30}>
-          {previousCompains.campaigns.data.map((campaign) => (
+          {previousCompains.campaigns?.data.map((campaign) => (
             <Col xs={24} lg={8} key={campaign.id}>
               <PreviousComapinsCard_section data={campaign} />
             </Col>
           ))}
-          {/* <Col xs={24} lg={8}>
-            <PreviousComapinsCard_section data={data} />
-          </Col>
-          <Col xs={24} lg={8}>
-            <PreviousComapinsCard_section data={data} />
-          </Col> */}
         </Row>
       </div>
     </div>

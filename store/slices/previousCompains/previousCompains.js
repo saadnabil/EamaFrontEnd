@@ -6,6 +6,7 @@ const initialState = {
   loading: false,
   apiErrors: [],
   previousCompains: {},
+  singlePreviousCompains: {},
 };
 
 export const getPreviousCompainsPage = createAsyncThunk(
@@ -13,6 +14,19 @@ export const getPreviousCompainsPage = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const data = await axios.get("/campaign-page");
+
+      return data.data;
+    } catch (error) {
+      return rejectWithValue(error.response);
+    }
+  }
+);
+
+export const getSinglePreviousCompainsThunk = createAsyncThunk(
+  "previousCompains/getSinglePreviousCompainsThunk",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const data = await axios.get(`/campaign/${payload}`);
 
       return data.data;
     } catch (error) {
@@ -32,6 +46,15 @@ export const previousCompainsSlice = createSlice({
 
     [getPreviousCompainsPage.fulfilled]: (state, action) => {
       state.previousCompains = action?.payload.data;
+      state.loading = false;
+    },
+
+    [getSinglePreviousCompainsThunk.pending]: (state) => {
+      state.loading = true;
+    },
+
+    [getSinglePreviousCompainsThunk.fulfilled]: (state, action) => {
+      state.singlePreviousCompains = action?.payload.data;
       state.loading = false;
     },
   },
