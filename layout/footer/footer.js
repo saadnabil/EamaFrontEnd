@@ -1,4 +1,4 @@
-import { Col, Form, Input, Row } from "antd";
+import { Col, Form, Input, message, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import style from "./footer.module.scss";
@@ -11,7 +11,10 @@ import { GrFacebookOption } from "react-icons/gr";
 import { FiSend } from "react-icons/fi";
 import { BsEnvelope } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { getLayoutFooter } from "../../store/slices/layout/getLayoutSlice";
+import {
+  footerSubscripeThunk,
+  getLayoutFooter,
+} from "../../store/slices/layout/getLayoutSlice";
 import { useEffect } from "react";
 
 export default function Footer() {
@@ -22,10 +25,17 @@ export default function Footer() {
     dispatch(getLayoutFooter());
   }, []);
 
-  console.log(footer);
-
   const onFinish = (values) => {
-    console.log("Success:", values);
+    dispatch(footerSubscripeThunk(values))
+      .unwrap()
+      .then((res) => {
+        message.success("Your Subscripe have successfully");
+      })
+      .catch((res) => {
+        message.error(res.data.message);
+      });
+
+    console.log(values);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -144,10 +154,10 @@ export default function Footer() {
                       <div className="icon1">
                         <BsEnvelope />
                       </div>
-                      <Input placeholder="Email" />
-                      <div className="icon2">
+                      <Input placeholder="Email" type="email" />
+                      <button className="icon2" type="submit">
                         <FiSend />
-                      </div>
+                      </button>
                     </div>
                   </Form.Item>
                 </Form>

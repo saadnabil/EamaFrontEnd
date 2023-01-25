@@ -10,9 +10,9 @@ const initialState = {
 
 export const getNewsPage = createAsyncThunk(
   "news/getNewsPage",
-  async (_, { rejectWithValue }) => {
+  async (payload, { rejectWithValue }) => {
     try {
-      const data = await axios.get("/news-page");
+      const data = await axios.get(`/news-page?page=${payload}`);
 
       return data.data;
     } catch (error) {

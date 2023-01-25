@@ -10,9 +10,9 @@ const initialState = {
 
 export const getPreviousCompainsPage = createAsyncThunk(
   "previousCompains/getPreviousCompainsPage",
-  async (_, { rejectWithValue }) => {
+  async (payload, { rejectWithValue }) => {
     try {
-      const data = await axios.get("/news-page");
+      const data = await axios.get("/campaign-page");
 
       return data.data;
     } catch (error) {

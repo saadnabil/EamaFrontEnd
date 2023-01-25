@@ -7,9 +7,9 @@ export const NewsCard_section = ({ data }) => {
       <Row gutter={60}>
         <Col xs={24} lg={12}>
           <div className="left  ">
-            {data?.image && (
+            {data?.thumbnail && (
               <Image
-                src={data.image}
+                src={data.thumbnail}
                 width={670}
                 height={508}
                 layout="responsive"
@@ -20,11 +20,9 @@ export const NewsCard_section = ({ data }) => {
         </Col>
         <Col xs={24} lg={12}>
           <div className="right">
-            <h3 className="mainHeading">
-              {data?.title} <span>.</span>
-            </h3>
+            <h3 className="mainHeading">{data?.title}</h3>
             <span>{data?.date}</span>
-            <p>{data?.descrition}</p>
+            <p>{data?.description}</p>
           </div>
         </Col>
       </Row>

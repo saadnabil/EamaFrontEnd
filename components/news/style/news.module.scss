@@ -25,12 +25,7 @@
                 text-transform: uppercase;
                 line-height: 1em;
                 margin-top: 50px;
-                margin-left: -20%;
                 position: relative;
-
-                @include medium {
-                    margin-left: 0;
-                }
 
                 &::after {
                     content: "";

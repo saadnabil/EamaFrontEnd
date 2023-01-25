@@ -125,10 +125,20 @@
                     border-radius: 0;
                     color: #fff;
                     box-shadow: none;
+
+                    &:hover {
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
                 }
 
                 .icon2 {
                     color: $c-p;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: transparent;
+                    cursor: pointer;
                 }
             }
             ul {

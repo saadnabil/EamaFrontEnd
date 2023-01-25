@@ -20,6 +20,19 @@ export const getLayoutFooter = createAsyncThunk(
   }
 );
 
+export const footerSubscripeThunk = createAsyncThunk(
+  "careers/careerFormThunk",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const data = await axios.post("/subscription", payload);
+
+      return data.data;
+    } catch (error) {
+      return rejectWithValue(error.response);
+    }
+  }
+);
+
 export const getLayoutSlice = createSlice({
   name: "layout",
   initialState,
