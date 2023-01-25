@@ -73,7 +73,7 @@ function HeaderApp() {
               </li>
               <li
                 className={
-                  router.pathname === "/previous-compains" ? "active" : ""
+                  router.pathname.includes("/previous-compains") ? "active" : ""
                 }
               >
                 <Link href="/previous-compains">

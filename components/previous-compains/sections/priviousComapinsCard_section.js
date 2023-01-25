@@ -16,11 +16,11 @@ export const PreviousComapinsCard_section = ({ data }) => {
       <div className="content">
         <h2>{data?.title}</h2>
         <h4 className="date">{data?.date}</h4>
-        {/* <Link href={data?.pdfLink}> */}
-        <div>
-          <ButtonsS1 text="read more" />
-        </div>
-        {/* </Link> */}
+        <Link href={`/previous-compains/${data?.id}`}>
+          <div>
+            <ButtonsS1 text="read more" />
+          </div>
+        </Link>
       </div>
     </div>
   );
