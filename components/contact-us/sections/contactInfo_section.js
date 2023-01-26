@@ -45,7 +45,7 @@ export const ContactInfo_section = () => {
         <Col xs={24} lg={12}>
           <div className="infoCard card2">
             <h3>stay connected</h3>
-            <p>{contact.contact_section.description}</p>
+            <p>{contact.contact_section?.description}</p>
             <ul className="social">
               {contact.socialmedia?.map((item) => (
                 <li key={item.id}>
