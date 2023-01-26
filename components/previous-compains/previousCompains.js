@@ -21,8 +21,6 @@ export const PreviousCompainsComponent = () => {
     dispatch(getPreviousCompainsPage(url.split("?page=")[1]));
   };
 
-  console.log(previousCompains);
-
   return (
     <div className={style.previousCompains}>
       <PageHeading_section data={previousCompains.cover_section} />

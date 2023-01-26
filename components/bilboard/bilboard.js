@@ -17,8 +17,6 @@ export const BilboardComponent = () => {
     dispatch(getBilboardPage());
   }, []);
 
-  console.log(bilboard);
-
   return (
     <div className={style.bilboard}>
       <PageHeading_section data={bilboard.cover_section} />

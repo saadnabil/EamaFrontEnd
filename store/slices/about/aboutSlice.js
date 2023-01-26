@@ -43,7 +43,6 @@ export const aboutSlice = createSlice({
     [HYDRATE]: (state, action) => {
       state.about = action.payload.about.about;
       if (action?.payload?.about?.about) {
-        console.log("----", action.payload.about.about);
       }
     },
   },

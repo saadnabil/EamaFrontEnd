@@ -14,7 +14,6 @@ export const NewsComponent = () => {
     dispatch(getNewsPage());
   }, []);
 
-  console.log(news);
   const changePagination = (url) => {
     dispatch(getNewsPage(url.split("?page=")[1]));
   };

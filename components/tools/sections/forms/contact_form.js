@@ -7,7 +7,6 @@ import ButtonsS1 from "../../buttons/buttonsS1";
 export const Contact_form = () => {
   const dispatch = useDispatch();
   const onFinish = (values) => {
-    console.log("Success:", values);
     dispatch(contactFormThunk(values))
       .unwrap()
       .then((res) => {

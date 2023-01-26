@@ -45,7 +45,6 @@ export const Careers_form = () => {
     },
   };
 
-  console.log(cvId);
   return (
     <div className="form">
       <Form

@@ -24,7 +24,6 @@ export const SinglePreviousCompainsComponent = () => {
     description: singlePreviousCompains.campaign?.title,
   };
 
-  console.log(singlePreviousCompains);
   return (
     <div className={style.singlePreviousCompains}>
       <PageHeading_section data={data} />

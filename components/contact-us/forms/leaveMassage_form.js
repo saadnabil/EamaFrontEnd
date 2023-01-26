@@ -9,7 +9,6 @@ export const LeaveMassage_form = () => {
   const dispatch = useDispatch();
 
   const onFinish = (values) => {
-    console.log("Success:", values);
     dispatch(contactFormThunk(values))
       .unwrap()
       .then((res) => {

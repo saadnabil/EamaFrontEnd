@@ -13,8 +13,6 @@ export const getServerSideProps = wrapper.getServerSideProps(
 export default function Home() {
   const { index } = useSelector(({ index }) => index);
 
-  console.log("ffe", index);
-
   return (
     <div>
       <Head>

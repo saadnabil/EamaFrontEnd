@@ -6,8 +6,6 @@ import { useSelector } from "react-redux";
 export const RelatedBlog_section = () => {
   const { singleBlog } = useSelector(({ blog }) => blog);
 
-  console.log(singleBlog.related_blogs);
-
   return (
     <div className="relatedBlogs">
       <h2 className="mainHeading">Related Blogs</h2>

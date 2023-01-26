@@ -3,10 +3,6 @@ import { Contact_form } from "./forms/contact_form";
 const { Panel } = Collapse;
 
 export const Contact_section = ({ data }) => {
-  const onChange = (key) => {
-    console.log(key);
-  };
-
   return (
     <div
       className="contactSection container_ overlay"

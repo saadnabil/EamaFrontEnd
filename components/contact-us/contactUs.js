@@ -15,8 +15,6 @@ export const ContactUsComponent = () => {
     dispatch(getContactPage());
   }, []);
 
-  console.log(contact);
-
   return (
     <div className={style.contactUs}>
       <PageHeading_section data={contact.cover_section} />

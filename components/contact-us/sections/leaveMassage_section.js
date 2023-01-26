@@ -6,8 +6,6 @@ import { LeaveMassage_form } from "../forms/leaveMassage_form";
 export const LeaveMassage_section = () => {
   const { contact } = useSelector(({ contact }) => contact);
 
-  console.log(contact.contact_section);
-
   return (
     <div className="leaveMassageSection container_">
       <Row>

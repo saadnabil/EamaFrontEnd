@@ -34,8 +34,6 @@ export default function Footer() {
       .catch((res) => {
         message.error(res.data.message);
       });
-
-    console.log(values);
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);

@@ -19,8 +19,6 @@ export const AboutComponent = () => {
     dispatch(getAboutPage());
   }, []);
 
-  console.log(about);
-
   return (
     <div className={style.about}>
       <PageHeading_section data={about.cover_section} />
