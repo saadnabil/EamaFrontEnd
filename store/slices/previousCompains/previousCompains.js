@@ -13,7 +13,7 @@ export const getPreviousCompainsPage = createAsyncThunk(
   "previousCompains/getPreviousCompainsPage",
   async (payload, { rejectWithValue }) => {
     try {
-      const data = await axios.get("/campaign-page");
+      const data = await axios.get(`/campaign-page?page=${payload}`);
 
       return data.data;
     } catch (error) {

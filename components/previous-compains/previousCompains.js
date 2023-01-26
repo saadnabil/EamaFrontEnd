@@ -5,6 +5,7 @@ import style from "./style/previousCompains.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getPreviousCompainsPage } from "../../store/slices/previousCompains/previousCompains";
+import { PaginationS1 } from "../tools/pagination/paginationS1";
 
 export const PreviousCompainsComponent = () => {
   const { previousCompains } = useSelector(
@@ -15,6 +16,10 @@ export const PreviousCompainsComponent = () => {
   useEffect(() => {
     dispatch(getPreviousCompainsPage());
   }, []);
+
+  const changePagination = (url) => {
+    dispatch(getPreviousCompainsPage(url.split("?page=")[1]));
+  };
 
   console.log(previousCompains);
 
@@ -29,6 +34,10 @@ export const PreviousCompainsComponent = () => {
             </Col>
           ))}
         </Row>
+        <PaginationS1
+          links={previousCompains.campaigns?.meta.links}
+          changePagination={changePagination}
+        />
       </div>
     </div>
   );

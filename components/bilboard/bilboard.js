@@ -24,13 +24,13 @@ export const BilboardComponent = () => {
       <PageHeading_section data={bilboard.cover_section} />
       <div className="container_">
         <Row gutter={20}>
-          {bilboard.billboards?.data.map((bilboard, i) => (
+          {bilboard.locations?.data.map((bilboard, i) => (
             <Col xs={24} sm={12} lg={8} key={bilboard.id}>
               <Link href={`/bilboard/${bilboard.id}`}>
                 <div className="bilboardCard overlay">
-                  <Image src={bilboard.cover} layout="fill" />
+                  <Image src={bilboard.thumbnail} layout="fill" />
                   <div className="content">
-                    <h3>{bilboard.title}</h3>
+                    <h3>{bilboard.location}</h3>
                   </div>
                 </div>
               </Link>

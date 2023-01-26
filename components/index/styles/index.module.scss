@@ -5,7 +5,7 @@
 .indexPage :global {
 
     .headSection {
-       min-height: 150vh;
+        min-height: 150vh;
         position: relative;
         margin-bottom: 200px;
 
@@ -26,7 +26,7 @@
                     height: 100%;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    // justify-content: center;
 
                     &::after {
                         background:  linear-gradient(to right, #000000 0%, rgb(0 0 0 / 95%) 50%, rgb(56 3 3 / 50%) 100%);

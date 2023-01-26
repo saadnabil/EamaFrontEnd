@@ -22,7 +22,7 @@ export const Head_swiper = () => {
         className="mySwiper"
         speed={1000}
         autoplay={{
-          delay: 5500,
+          delay: 6500,
           disableOnInteraction: false,
         }}
       >

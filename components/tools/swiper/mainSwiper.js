@@ -15,7 +15,7 @@ export const MainSwiper = ({ images }) => {
         // }}
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
-        speed={2000}
+        speed={1000}
         autoPlay={true}
       >
         {images?.map((image) => (

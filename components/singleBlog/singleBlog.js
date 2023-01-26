@@ -43,7 +43,7 @@ export const SingleBlogComponent = () => {
         </Row>
         <RelatedBlog_section />
       </div>
-      <BlogVideo_section />
+      {/* <BlogVideo_section /> */}
     </div>
   );
 };

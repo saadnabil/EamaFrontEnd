@@ -32,20 +32,20 @@ export const OutDoor_section = () => {
             </h3>
             <p>{index.video_section?.descrition}</p>
 
-            <div className="showVideo" onClick={() => setOpen(true)}>
+            {/* <div className="showVideo" onClick={() => setOpen(true)}>
               <BsFillPlayFill />
-            </div>
+            </div> */}
           </div>
         </Col>
       </Row>
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         autoplay={true}
         isOpen={isOpen}
         videoId="L61p2uyiMSo"
         // videoUrl={index.video_section?.video_url}
         onClose={() => setOpen(false)}
-      />
+      /> */}
     </div>
   );
 };
