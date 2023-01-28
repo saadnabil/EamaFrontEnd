@@ -9,13 +9,14 @@ import {
 } from "react-icons/ai";
 import { GrFacebookOption } from "react-icons/gr";
 import { FiSend } from "react-icons/fi";
-import { BsEnvelope } from "react-icons/bs";
+import { BsEnvelope, BsInstagram } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import {
   footerSubscripeThunk,
   getLayoutFooter,
 } from "../../store/slices/layout/getLayoutSlice";
 import { useEffect } from "react";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const { footer } = useSelector(({ layout }) => layout);
@@ -165,13 +166,15 @@ export default function Footer() {
                       <Link href={item.link}>
                         <a>
                           {item.type === "facebook" ? (
-                            <GrFacebookOption />
+                            <FaFacebookF />
                           ) : item.type === "twitter" ? (
                             <AiOutlineTwitter />
                           ) : item.type === "youtube" ? (
-                            <AiFillYoutube />
-                          ) : item.type === "Instagram" ? (
-                            <AiFillInstagram />
+                            <FaYoutube />
+                          ) : item.type === "instagram" ? (
+                            <BsInstagram />
+                          ) : item.type === "linkedin" ? (
+                            <FaLinkedinIn />
                           ) : (
                             ""
                           )}

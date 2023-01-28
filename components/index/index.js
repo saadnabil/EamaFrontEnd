@@ -29,8 +29,8 @@ export default function Home() {
         <OurServices_section />
         {/* <SpringBanner_section /> */}
         <OutDoor_section />
-        <Exepert_section data={index.statistic_section_one} />
-        <Progress_section />
+        {/* <Exepert_section data={index.statistic_section_one} /> */}
+        {/* <Progress_section /> */}
         <OurProjects_section />
         <OurTeam_section data={index.team} titleData={index.team_section} />
         {/* <Customers_section data={index?.client} /> */}

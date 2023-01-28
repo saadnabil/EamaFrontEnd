@@ -45,6 +45,7 @@
 
       ul {
          margin-left: 30px;
+         flex: 2;
 
          a {
             color: #fff;
@@ -60,7 +61,7 @@
          li {
             margin: 0px 10px;
             font-weight: 400;
-            font-size: 11px;
+            font-size: 13px;
             text-transform: uppercase;
          }
       }

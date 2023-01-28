@@ -437,7 +437,7 @@
             height: 100% !important;
         }
         .card {
-            opacity: .4;
+            // opacity: .4;
             transition: .5s;
             display: flex;
             justify-content: center;
@@ -445,9 +445,9 @@
             background-size: cover;
             background-position: center center;
 
-            &:hover {
-                opacity: 1;
-            }
+            // &:hover {
+            //     opacity: 1;
+            // }
         }
     }
 }

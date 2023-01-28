@@ -1,10 +1,15 @@
 import { Col, Row } from "antd";
-import { BsInstagram, BsTelephoneFill } from "react-icons/bs";
+import {
+  BsFillHouseDoorFill,
+  BsInstagram,
+  BsTelephoneFill,
+} from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { AiFillClockCircle, AiOutlineTwitter } from "react-icons/ai";
-import { FaFacebookF, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import Link from "next/link";
+import GoogleMapReact from "google-map-react";
 
 export const ContactInfo_section = () => {
   const { contact } = useSelector(({ contact }) => contact);
@@ -31,8 +36,8 @@ export const ContactInfo_section = () => {
                     <BsTelephoneFill />
                   ) : item.type === "email" ? (
                     <MdEmail />
-                  ) : item.type === "" ? (
-                    <AiFillClockCircle />
+                  ) : item.type === "address" ? (
+                    <BsFillHouseDoorFill />
                   ) : (
                     ""
                   )}
@@ -57,8 +62,10 @@ export const ContactInfo_section = () => {
                         <AiOutlineTwitter />
                       ) : item.type === "youtube" ? (
                         <FaYoutube />
-                      ) : item.type === "Instagram" ? (
+                      ) : item.type === "instagram" ? (
                         <BsInstagram />
+                      ) : item.type === "linkedin" ? (
+                        <FaLinkedinIn />
                       ) : (
                         ""
                       )}
@@ -70,13 +77,17 @@ export const ContactInfo_section = () => {
             </ul>
           </div>
         </Col>
-        {/* <Col xs={24} lg={8}>
-          <GoogleMapReact
-            bootstrapURLKeys={{ key: "" }}
-            defaultCenter={defaultProps.center}
-            defaultZoom={defaultProps.zoom}
-          ></GoogleMapReact>
-        </Col> */}
+        <Col xs={24} lg={24}>
+          <div className="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13667.694599481458!2d31.296966849999993!3d31.084050699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79f05fe997979%3A0x5ec252a182b1486e!2z2YPZgdixINin2YTYrdi12Yc!5e0!3m2!1sen!2seg!4v1674895117098!5m2!1sen!2seg"
+              width="100%"
+              height="250"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </Col>
       </Row>
     </div>
   );

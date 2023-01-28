@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCustomersPage } from "../../store/slices/customers/customersSlice";
 import { PageHeading_section } from "../tools/sections/pageHeading_section";
+import { Testimonials_section } from "../tools/sections/testimonials_section";
 import { Customers_section } from "./sections/customers_section";
 import style from "./style/customers.module.scss";
 
@@ -18,6 +19,9 @@ export const CustomersComponent = () => {
   return (
     <div className={style.customers}>
       <PageHeading_section data={customers.cover_section} />
+      <div className="container_  ">
+        <Testimonials_section />
+      </div>
       <Customers_section />
     </div>
   );
