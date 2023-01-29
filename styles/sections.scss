@@ -25,6 +25,15 @@
     background-size: cover;
     background-position: center center;
 
+    @include medium {
+        height: 60vh;
+
+        &::after {
+            height: 60vh !important;
+
+        }
+    }
+
     // @include medium {
     //     height: 50vh;
     // }
