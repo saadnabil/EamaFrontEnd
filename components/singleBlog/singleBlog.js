@@ -12,12 +12,12 @@ import style from "./style/singleBlog.module.scss";
 
 export const SingleBlogComponent = () => {
   const { singleBlog } = useSelector(({ blog }) => blog);
-  const dispatch = useDispatch();
-  const router = useRouter();
+  // const dispatch = useDispatch();
+  // const router = useRouter();
 
-  useEffect(() => {
-    dispatch(getSingleBlogThunk(router.query.blogId));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getSingleBlogThunk(router.query.blogId));
+  // }, []);
 
   const data = {
     title: singleBlog.blog?.subtitle,

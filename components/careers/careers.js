@@ -9,11 +9,11 @@ import { getCareersPage } from "../../store/slices/careers/careersSlice";
 
 export const CareersComponent = () => {
   const { careers } = useSelector(({ careers }) => careers);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getCareersPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getCareersPage());
+  // }, []);
 
   return (
     <div className={style.careers}>

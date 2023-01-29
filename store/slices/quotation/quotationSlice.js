@@ -49,9 +49,7 @@ export const getQuotationSlice = createSlice({
     },
 
     [HYDRATE]: (state, action) => {
-      if (action.payload?.index?.quotation) {
-        state.quotation = action.payload;
-      }
+      state.quotation = action.payload.quotation.quotation;
     },
   },
 });

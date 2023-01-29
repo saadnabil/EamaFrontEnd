@@ -1,5 +1,13 @@
 import Head from "next/head";
 import { NewsComponent } from "../components/news/news";
+import { getNewsPage } from "../store/slices/news/news";
+import { wrapper } from "../store/store";
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async (context) => {
+    await store.dispatch(getNewsPage());
+  }
+);
 
 const NewsPage = () => {
   return (

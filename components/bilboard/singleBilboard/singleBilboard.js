@@ -10,12 +10,12 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 export const SingleBilboardComponent = () => {
   const { singleBilboard } = useSelector(({ bilboard }) => bilboard);
-  const dispatch = useDispatch();
-  const router = useRouter();
+  // const dispatch = useDispatch();
+  // const router = useRouter();
 
-  useEffect(() => {
-    dispatch(getSingleBilboard(router.query.bilboardId));
-  }, [router.query]);
+  // useEffect(() => {
+  //   dispatch(getSingleBilboard(router.query.bilboardId));
+  // }, [router.query]);
 
   const data = {
     image: singleBilboard.billboard?.thumbnail,

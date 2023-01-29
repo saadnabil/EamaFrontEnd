@@ -1,6 +1,13 @@
-import React from "react";
 import { BilboardComponent } from "../../components/bilboard/bilboard";
 import Head from "next/head";
+import { wrapper } from "../../store/store";
+import { getBilboardPage } from "../../store/slices/bilboard/bilboardSlice";
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async (context) => {
+    await store.dispatch(getBilboardPage());
+  }
+);
 
 const BilbaordPage = () => {
   return (

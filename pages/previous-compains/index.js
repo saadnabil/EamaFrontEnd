@@ -1,5 +1,13 @@
 import Head from "next/head";
 import { PreviousCompainsComponent } from "../../components/previous-compains/previousCompains";
+import { getPreviousCompainsPage } from "../../store/slices/previousCompains/previousCompains";
+import { wrapper } from "../../store/store";
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async (context) => {
+    await store.dispatch(getPreviousCompainsPage());
+  }
+);
 
 const PreviousCompainsPage = () => {
   return (

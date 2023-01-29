@@ -9,11 +9,11 @@ import style from "./style/requestQutation.module.scss";
 
 export const RequestQutaitonComponent = () => {
   const { quotation } = useSelector(({ quotation }) => quotation);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getQuotationPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getQuotationPage());
+  // }, []);
 
   return (
     <div className={style.requestQutation}>

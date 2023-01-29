@@ -1,13 +1,14 @@
 import Head from "next/head";
 import { RequestQutaitonComponent } from "../components/request-qutation/requestQutation";
 import { getQuotationPage } from "../store/slices/quotation/quotationSlice";
-import { wrapper } from "@store/store";
+import { wrapper } from "../store/store";
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async (context) => {
     await store.dispatch(getQuotationPage());
   }
 );
+
 const RequestQutationPage = () => {
   return (
     <div>

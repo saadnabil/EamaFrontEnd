@@ -11,11 +11,11 @@ export const PreviousCompainsComponent = () => {
   const { previousCompains } = useSelector(
     ({ previousCompains }) => previousCompains
   );
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getPreviousCompainsPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getPreviousCompainsPage());
+  // }, []);
 
   const changePagination = (url) => {
     dispatch(getPreviousCompainsPage(url.split("?page=")[1]));

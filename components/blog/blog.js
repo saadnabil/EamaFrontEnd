@@ -9,11 +9,11 @@ import { PaginationS1 } from "../tools/pagination/paginationS1";
 
 export const BlogComponent = () => {
   const { blog } = useSelector(({ blog }) => blog);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getBlogPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getBlogPage());
+  // }, []);
 
   const changePagination = (url) => {
     dispatch(getBlogPage(url.split("?page=")[1]));

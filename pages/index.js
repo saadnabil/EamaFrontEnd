@@ -4,14 +4,15 @@ import { useSelector } from "react-redux";
 import { getIndexPage } from "../store/slices/index/indexSlice";
 import { wrapper } from "../store/store";
 
-export const getServerSideProps = wrapper.getServerSideProps(
-  (store) => async (context) => {
+export const getServerSideProps = wrapper.getServerSideProps((store) => async (context) => {
     await store.dispatch(getIndexPage());
   }
 );
 
 export default function Home() {
   const { index } = useSelector(({ index }) => index);
+
+  console.log(index)
 
   return (
     <div>

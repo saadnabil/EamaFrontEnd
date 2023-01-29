@@ -18,7 +18,7 @@
             height: 150vh;
             @include medium {
                 margin-bottom: 40px;
-                height: 60vh;
+                height: 50vh;
             }
             .swiper {
                 height: 100%;
@@ -26,7 +26,6 @@
                     height: 100%;
                     display: flex;
                     align-items: center;
-                    // justify-content: center;
 
                     &::after {
                         background:  linear-gradient(to right, #000000 0%, rgb(0 0 0 / 95%) 50%, rgb(56 3 3 / 50%) 100%);
@@ -35,6 +34,7 @@
                             background:  linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.75) 21%, rgba(56, 3, 3, 0.5) 100%);
                         }
                     }
+
                     .imgContainer {
                         position: absolute;
                         height: 100%;
@@ -52,6 +52,7 @@
                             flex-direction: column;
                             align-items: center;
                             text-align: center;
+                            width: 100%;
                         }
 
                         h1 {
@@ -71,7 +72,14 @@
                             }
 
                             @include small {
-                                font-size: 30px;
+                                font-size: 16px;
+                                text-align: center;
+                            }
+                        }
+
+                        button {
+                             @include medium {
+                                min-height: 30px;
                             }
                         }
                     }
@@ -85,6 +93,10 @@
                     &:hover {
                         background: $c-p;
                         border: none;
+                    }
+
+                    @include small {
+                        display: none;
                     }
                 }
 

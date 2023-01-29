@@ -57,6 +57,12 @@ export const previousCompainsSlice = createSlice({
       state.singlePreviousCompains = action?.payload.data;
       state.loading = false;
     },
+
+    [HYDRATE]: (state, action) => {
+      state.previousCompains = action.payload.previousCompains.previousCompains;
+      state.singlePreviousCompains =
+        action.payload.previousCompains.singlePreviousCompains;
+    },
   },
 });
 

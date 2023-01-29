@@ -18,16 +18,6 @@ function SetApp({ children }) {
   useMemo(() => {
     // set axios
     axios.defaults.baseURL = allUrl.apiUrl;
-    axios.defaults.headers.common["lang"] = lang;
-    axios.defaults.headers.common["domain"] = cookies.SUserDomain;
-    axios.defaults.headers.common["Authorization"] = "Bearer " + cookies.SToken;
-  }, []);
-
-  useEffect(() => {
-    if (cookies["SToken"]) {
-      dispatch(setCheckUser(true));
-    }
-    dispatch(setFirstLoad(true));
   }, []);
 
   return children;

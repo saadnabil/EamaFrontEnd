@@ -9,11 +9,11 @@ import style from "./style/contactUs.module.scss";
 export const ContactUsComponent = () => {
   const { contact } = useSelector(({ contact }) => contact);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getContactPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getContactPage());
+  // }, []);
 
   return (
     <div className={style.contactUs}>

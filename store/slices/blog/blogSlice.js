@@ -59,9 +59,8 @@ export const glogSlice = createSlice({
     },
 
     [HYDRATE]: (state, action) => {
-      if (action.payload?.index?.blog) {
-        state.blog = action.payload;
-      }
+      state.blog = action.payload.blog.blog;
+      state.singleBlog = action.payload.blog.singleBlog;
     },
   },
 });

@@ -1,5 +1,15 @@
 import Head from "next/head";
 import { SinglePreviousCompainsComponent } from "../../components/previous-compains/single-previous-compains/singlePreviousCompains";
+import { getSinglePreviousCompainsThunk } from "../../store/slices/previousCompains/previousCompains";
+import { wrapper } from "../../store/store";
+
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async (context) => {
+    await store.dispatch(
+      getSinglePreviousCompainsThunk(context.query.previousCompainsId)
+    );
+  }
+);
 
 const SinglePreviousCompains = () => {
   return (

@@ -48,8 +48,6 @@ export const contactSlice = createSlice({
       state.loading = false;
     },
 
-    [getContactPage.rejected]: (state, action) => {},
-
     [HYDRATE]: (state, action) => {
       state.contact = action.payload.contact.contact;
     },

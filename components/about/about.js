@@ -13,11 +13,11 @@ import style from "./style/about.module.scss";
 
 export const AboutComponent = () => {
   const { about } = useSelector(({ about }) => about);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getAboutPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getAboutPage());
+  // }, []);
 
   return (
     <div className={style.about}>

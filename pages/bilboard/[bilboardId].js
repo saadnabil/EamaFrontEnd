@@ -1,6 +1,13 @@
 import Head from "next/head";
 import { SingleBilboardComponent } from "../../components/bilboard/singleBilboard/singleBilboard";
+import { getSingleBilboard } from "../../store/slices/bilboard/bilboardSlice";
+import { wrapper } from "../../store/store";
 
+export const getServerSideProps = wrapper.getServerSideProps(
+  (store) => async (context) => {
+    await store.dispatch(getSingleBilboard(context.query.bilboardId));
+  }
+);
 const SingleBilboardPage = () => {
   return (
     <div>

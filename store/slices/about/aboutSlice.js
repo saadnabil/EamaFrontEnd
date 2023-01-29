@@ -35,15 +35,9 @@ export const aboutSlice = createSlice({
       state.loading = false;
     },
 
-    [getAboutPage.rejected]: (state, action) => {
-      state.apiErrors = "";
-      state.loading = false;
-    },
 
     [HYDRATE]: (state, action) => {
       state.about = action.payload.about.about;
-      if (action?.payload?.about?.about) {
-      }
     },
   },
 });

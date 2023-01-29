@@ -36,9 +36,7 @@ export const aboutSlice = createSlice({
     },
 
     [HYDRATE]: (state, action) => {
-      if (action.payload?.index?.customers) {
-        state.customers = action.payload;
-      }
+      state.customers = action.payload.customers.customers;
     },
   },
 });

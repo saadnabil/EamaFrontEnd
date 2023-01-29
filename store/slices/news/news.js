@@ -34,6 +34,10 @@ export const getNewsSlice = createSlice({
       state.news = action?.payload.data;
       state.loading = false;
     },
+
+    [HYDRATE]: (state, action) => {
+      state.news = action.payload.news.news;
+    },
   },
 });
 

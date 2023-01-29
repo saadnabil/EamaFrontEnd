@@ -16,11 +16,6 @@ import { useEffect } from "react";
 
 export default function Home() {
   const { index } = useSelector(({ index }) => index);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getIndexPage());
-  }, []);
 
   return (
     <section className={style.indexPage}>

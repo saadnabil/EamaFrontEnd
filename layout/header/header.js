@@ -23,7 +23,7 @@ function HeaderApp() {
               <div className="logo">
                 <Link href="/">
                   <a>
-                    <Image src={"/images/logo.png"} width={158} height={54} />
+                    <Image src={"/images/logo.png"} width={128} height={54} />
                   </a>
                 </Link>
               </div>

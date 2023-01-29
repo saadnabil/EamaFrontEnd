@@ -8,11 +8,11 @@ import style from "./style/news.module.scss";
 
 export const NewsComponent = () => {
   const { news } = useSelector(({ news }) => news);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getNewsPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getNewsPage());
+  // }, []);
 
   const changePagination = (url) => {
     dispatch(getNewsPage(url.split("?page=")[1]));

@@ -58,9 +58,8 @@ export const bilboardSlice = createSlice({
       state.loading = false;
     },
     [HYDRATE]: (state, action) => {
-      if (action.payload?.index?.blog) {
-        state.blog = action.payload;
-      }
+      state.bilboard = action.payload.bilboard.bilboard;
+      state.singleBilboard = action.payload.bilboard.singleBilboard;
     },
   },
 });

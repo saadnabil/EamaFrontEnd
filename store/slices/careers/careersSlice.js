@@ -49,9 +49,7 @@ export const getCareersSlice = createSlice({
     },
 
     [HYDRATE]: (state, action) => {
-      if (action.payload?.index?.careers) {
-        state.careers = action.payload;
-      }
+      state.careers = action.payload.careers.careers;
     },
   },
 });

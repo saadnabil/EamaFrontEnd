@@ -12,11 +12,11 @@ export const SinglePreviousCompainsComponent = () => {
   const { singlePreviousCompains } = useSelector(
     ({ previousCompains }) => previousCompains
   );
-  const dispatch = useDispatch();
-  const router = useRouter();
-  useEffect(() => {
-    dispatch(getSinglePreviousCompainsThunk(router.query.previousCompainsId));
-  }, []);
+  // const dispatch = useDispatch();
+  // const router = useRouter();
+  // useEffect(() => {
+  //   dispatch(getSinglePreviousCompainsThunk(router.query.previousCompainsId));
+  // }, []);
 
   const data = {
     title: singlePreviousCompains.campaign?.subtitle,

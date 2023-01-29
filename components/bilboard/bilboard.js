@@ -11,11 +11,11 @@ import style from "./style/bilboard.module.scss";
 
 export const BilboardComponent = () => {
   const { bilboard } = useSelector(({ bilboard }) => bilboard);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getBilboardPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getBilboardPage());
+  // }, []);
 
   return (
     <div className={style.bilboard}>

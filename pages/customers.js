@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { CustomersComponent } from "../components/customers/customers";
-import { wrapper } from "@store/store";
 import { getCustomersPage } from "../store/slices/customers/customersSlice";
+import { wrapper } from "../store/store";
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) => async (context) => {
