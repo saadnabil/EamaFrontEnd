@@ -87,7 +87,10 @@ const Menue = () => {
                   <a>Our Blog</a>
                 </Link>
               </li>
-              <li className={router.pathname === "/news" ? "active" : ""} onClick={onClose}>
+              <li
+                className={router.pathname === "/news" ? "active" : ""}
+                onClick={onClose}
+              >
                 <Link href="/news">
                   <a>News</a>
                 </Link>
@@ -110,7 +113,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/previous-compains">
-                  <a>previous compains</a>
+                  <a>Previous Campaign</a>
                 </Link>
               </li>
               <li

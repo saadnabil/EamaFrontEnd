@@ -80,7 +80,7 @@ export const ContactInfo_section = () => {
         <Col xs={24} lg={24}>
           <div className="map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13667.694599481458!2d31.296966849999993!3d31.084050699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79f05fe997979%3A0x5ec252a182b1486e!2z2YPZgdixINin2YTYrdi12Yc!5e0!3m2!1sen!2seg!4v1674895117098!5m2!1sen!2seg"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1725.758605374272!2d31.3681992!3d30.1080103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145817790485a9eb%3A0x3132a0695aac763!2sEama%20advertising!5e0!3m2!1sen!2seg!4v1675020329420!5m2!1sen!2seg"
               width="100%"
               height="250"
               loading="lazy"
