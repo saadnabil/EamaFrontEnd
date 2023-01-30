@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useSelector } from "react-redux";
 import { SingleBlogComponent } from "../../components/singleBlog/singleBlog";
 import { getSingleBlogThunk } from "../../store/slices/blog/blogSlice";
 import { wrapper } from "../../store/store";
@@ -10,12 +11,22 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 const SingleBlogPage = () => {
+  const { singleBlog } = useSelector(({ blog }) => blog);
+
   return (
     <div>
       <Head>
-        <title>emma website</title>
-        <meta key="description" name="description" content="My new title" />
-        <meta key="keywords" name="keywords" content="My, new, title" />
+        <title>{singleBlog.blog.meta_title}</title>
+        <meta
+          key="description"
+          name="description"
+          content={singleBlog.blog.meta_description}
+        />
+        <meta
+          key="keywords"
+          name="keywords"
+          content={singleBlog.blog.meta_tag.map((tag) => `${tag}, `)}
+        />
       </Head>
       <SingleBlogComponent />
     </div>

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useSelector } from "react-redux";
 import { SinglePreviousCompainsComponent } from "../../components/previous-compains/single-previous-compains/singlePreviousCompains";
 import { getSinglePreviousCompainsThunk } from "../../store/slices/previousCompains/previousCompains";
 import { wrapper } from "../../store/store";
@@ -12,12 +13,26 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 const SinglePreviousCompains = () => {
+  const { singlePreviousCompains } = useSelector(
+    ({ previousCompains }) => previousCompains
+  );
+
   return (
     <div>
       <Head>
-        <title>emma website</title>
-        <meta key="description" name="description" content="My new title" />
-        <meta key="keywords" name="keywords" content="My, new, title" />
+        <title>{singlePreviousCompains.campaign.meta_title}</title>
+        <meta
+          key="description"
+          name="description"
+          content={singlePreviousCompains.campaign.meta_description}
+        />
+        <meta
+          key="keywords"
+          name="keywords"
+          content={singlePreviousCompains.campaign.meta_tag.map(
+            (tag) => `${tag}, `
+          )}
+        />
       </Head>
 
       <SinglePreviousCompainsComponent />

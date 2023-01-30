@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useSelector } from "react-redux";
 import { CustomersComponent } from "../components/customers/customers";
 import { getCustomersPage } from "../store/slices/customers/customersSlice";
 import { wrapper } from "../store/store";
@@ -10,12 +11,22 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 const CustomersPage = () => {
+  const { customers } = useSelector(({ customers }) => customers);
+
   return (
     <div>
       <Head>
-        <title>emma website</title>
-        <meta key="description" name="description" content="My new title" />
-        <meta key="keywords" name="keywords" content="My, new, title" />
+        <title>{customers.seo_section.meta_title}</title>
+        <meta
+          key="description"
+          name="description"
+          content={customers.seo_section.meta_description}
+        />
+        <meta
+          key="keywords"
+          name="keywords"
+          content={customers.seo_section.meta_tag.map((tag) => `${tag}, `)}
+        />
       </Head>
       <CustomersComponent />
     </div>

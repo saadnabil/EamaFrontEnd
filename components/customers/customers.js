@@ -8,19 +8,24 @@ import style from "./style/customers.module.scss";
 
 export const CustomersComponent = () => {
   const { customers } = useSelector(({ customers }) => customers);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getCustomersPage());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getCustomersPage());
+  // }, []);
 
-  console.log(customers.cover_section);
+  console.log(customers);
+
+  const data = {};
 
   return (
     <div className={style.customers}>
       <PageHeading_section data={customers.cover_section} />
       <div className="container_  ">
-        <Testimonials_section />
+        <Testimonials_section
+          titleData={customers.testimonial_section}
+          data={customers.testimonials}
+        />
       </div>
       <Customers_section />
     </div>

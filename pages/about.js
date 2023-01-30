@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useSelector } from "react-redux";
 import { AboutComponent } from "../components/about/about";
 import { getAboutPage } from "../store/slices/about/aboutSlice";
 import { wrapper } from "../store/store";
@@ -10,12 +11,22 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 const AboutPage = () => {
+  const { about } = useSelector(({ about }) => about);
+
   return (
     <div>
       <Head>
-        <title>emma website</title>
-        <meta key="description" name="description" content="My new title" />
-        <meta key="keywords" name="keywords" content="My, new, title" />
+        <title>{about.seo_section.meta_title}</title>
+        <meta
+          key="description"
+          name="description"
+          content={about.seo_section.meta_description}
+        />
+        <meta
+          key="keywords"
+          name="keywords"
+          content={about.seo_section.meta_tag.map((tag) => `${tag}, `)}
+        />
       </Head>
       <AboutComponent />
     </div>

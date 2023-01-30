@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useSelector } from "react-redux";
 import { SingleBilboardComponent } from "../../components/bilboard/singleBilboard/singleBilboard";
 import { getSingleBilboard } from "../../store/slices/bilboard/bilboardSlice";
 import { wrapper } from "../../store/store";
@@ -9,6 +10,8 @@ export const getServerSideProps = wrapper.getServerSideProps(
   }
 );
 const SingleBilboardPage = () => {
+  const { singleBilboard } = useSelector(({ bilboard }) => bilboard);
+
   return (
     <div>
       <Head>
