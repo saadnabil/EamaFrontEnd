@@ -16,9 +16,6 @@ export const Customers_section = () => {
           <Col xs={24} sm={12} lg={6} key={customer.id}>
             <div className="customer ">
               <Image src={customer.image} layout="fill" />
-              {/* <div className="content">
-                <h3>{customer.title}</h3>
-              </div> */}
             </div>
           </Col>
         ))}

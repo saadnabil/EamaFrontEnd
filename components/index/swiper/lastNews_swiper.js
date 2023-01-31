@@ -30,7 +30,7 @@ export const LastNews_swiper = ({ data }) => {
     <div className="lastNewsSwiper">
       <Swiper
         slidesPerGroup={1}
-        loop={true}
+        // loop={true}
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Navigation]}
@@ -38,7 +38,7 @@ export const LastNews_swiper = ({ data }) => {
         breakpoints={breakpoints}
         speed={1000}
       >
-        {/* {data?.map((slider, i) => (
+        {data?.map((slider, i) => (
           <SwiperSlide key={i}>
             <div
               className="card overlay"
@@ -58,7 +58,7 @@ export const LastNews_swiper = ({ data }) => {
               </div>
             </div>
           </SwiperSlide>
-        ))} */}
+        ))}
       </Swiper>
     </div>
   );

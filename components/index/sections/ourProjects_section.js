@@ -12,7 +12,7 @@ export const OurProjects_section = () => {
       <div className="topHeading">
         <Image src="/photos/home/bgOurProjcets.jpg" layout="fill" alt="bg" />
         <div className="headingContent">
-          <span className="subTitle">{ourProjects?.subtitle}</span>
+          {/* <span className="subTitle">{ourProjects?.subtitle}</span> */}
           <h3 className="mainHeading">
             {ourProjects?.title} <span>.</span>
           </h3>

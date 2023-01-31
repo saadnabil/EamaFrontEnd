@@ -11,9 +11,9 @@ export const Contact_section = ({ data }) => {
       <Row gutter={80}>
         <Col xs={24} lg={12}>
           <div className="contactContent">
-            <span className="subTitle">{data?.subtitle}</span>
+            {/* <span className="subTitle">{data?.subtitle}</span> */}
             <h2 className="mainHeading">{data?.title}</h2>
-            <p>{data?.description}</p>
+            {/* <p>{data?.description}</p> */}
           </div>
         </Col>
         <Col xs={24} lg={12}>

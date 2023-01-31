@@ -8,7 +8,7 @@ export const OurServices_section = () => {
   return (
     <div className="ourServices container_">
       <div className="heading">
-        <span>WHAT WE DO</span>
+        {/* <span>WHAT WE DO</span> */}
         <h3 className="mainHeading">
           OUR SERVICES <span>.</span>
         </h3>

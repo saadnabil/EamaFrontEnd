@@ -8,7 +8,7 @@ export const OurTeam_section = ({ data, titleData }) => {
       style={{ backgroundImage: `url(${titleData?.image})` }}
     >
       <div className="heading">
-        <span className="subTitle">{titleData?.subtitle}</span>
+        {/* <span className="subTitle">{titleData?.subtitle}</span> */}
         <h3 className="mainHeading">
           {titleData?.title} <span>.</span>
         </h3>

@@ -14,7 +14,7 @@ export const LeaveMassage_section = () => {
             <Image
               src={contact.contact_section?.image}
               width={500}
-              height={900}
+              height={800}
               layout="responsive"
               alt=""
             />
@@ -22,11 +22,11 @@ export const LeaveMassage_section = () => {
         </Col>
         <Col xs={24} lg={12}>
           <div className="content">
-            <span className="subTitle">
+            {/* <span className="subTitle">
               {contact.contact_section?.subtitle}
-            </span>
+            </span> */}
             <h3>{contact.contact_section?.title}</h3>
-            <p>{contact.contact_section?.description}</p>
+            {/* <p>{contact.contact_section?.description}</p> */}
             <LeaveMassage_form />
           </div>
         </Col>

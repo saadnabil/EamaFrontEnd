@@ -16,16 +16,16 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>{index.seo_section.meta_title}</title>
+        <title>{index.seo_section?.meta_title}</title>
         <meta
           key="description"
           name="description"
-          content={index.seo_section.meta_description}
+          content={index.seo_section?.meta_description}
         />
         <meta
           key="keywords"
           name="keywords"
-          content={index.seo_section.meta_tag.map((tag) => `${tag}, `)}
+          content={index.seo_section?.meta_tag.map((tag) => `${tag}, `)}
         />
       </Head>
 

@@ -31,8 +31,8 @@ export const AboutComponent = () => {
           titleData={about.testimonial_section}
         />
       </div>
+    <Contact_section data={about.faq_section} /> */}
       <OurTeam_section data={about.team} titleData={about.team_section} />
-      <Contact_section data={about.faq_section} /> */}
       <Customers_section data={about.client} />
     </div>
   );

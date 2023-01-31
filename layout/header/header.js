@@ -63,21 +63,21 @@ function HeaderApp() {
 
               <li className={router.pathname.includes("/blog") ? "active" : ""}>
                 <Link href="/blog">
-                  <a>Our Blog</a>
+                  <a>Our News</a>
                 </Link>
               </li>
-              <li className={router.pathname === "/news" ? "active" : ""}>
+              {/* <li className={router.pathname === "/news" ? "active" : ""}>
                 <Link href="/news">
                   <a>News</a>
                 </Link>
-              </li>
+              </li> */}
               <li
                 className={
                   router.pathname.includes("/previous-compains") ? "active" : ""
                 }
               >
                 <Link href="/previous-compains">
-                  <a>Previous Campaign</a>
+                  <a>Previous Campaigns</a>
                 </Link>
               </li>
               <li

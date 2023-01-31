@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import Image from "next/image";
 
 export const Testimonials_swiper = ({ data }) => {
@@ -32,6 +32,10 @@ export const Testimonials_swiper = ({ data }) => {
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Navigation]}
+        // autoplay={{
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // }}
         className="mySwiper"
         speed={1000}
         breakpoints={breakpoints}

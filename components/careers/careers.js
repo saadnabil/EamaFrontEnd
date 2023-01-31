@@ -30,11 +30,11 @@ export const CareersComponent = () => {
           </Col>
           <Col xs={24} lg={12}>
             <div className="content">
-              <span className="subTitle">
+              {/* <span className="subTitle">
                 {careers.quotation_section?.subtitle}
-              </span>
+              </span> */}
               <h3>{careers.quotation_section?.title}</h3>
-              <p>{careers.quotation_section?.description}</p>
+              {/* <p>{careers.quotation_section?.description}</p> */}
               <Careers_form />
             </div>
           </Col>

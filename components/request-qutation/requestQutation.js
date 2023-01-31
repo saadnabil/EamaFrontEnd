@@ -30,11 +30,11 @@ export const RequestQutaitonComponent = () => {
           </Col>
           <Col xs={24} lg={12}>
             <div className="requestQutationContent">
-              <span className="subTitle">
+              {/* <span className="subTitle">
                 {quotation?.quotation_section.subtitle}
-              </span>
+              </span> */}
               <h3>{quotation?.quotation_section.title}</h3>
-              <p>{quotation?.quotation_section.description}</p>
+              {/* <p>{quotation?.quotation_section.description}</p> */}
               <RequestQutation_form />
             </div>
           </Col>

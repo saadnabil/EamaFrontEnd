@@ -68,10 +68,10 @@ export default function Footer() {
                     <Image src={"/images/logo.png"} width={158} height={54} />
                   </a>
                 </Link>
-                <p>
+                {/* <p>
                   © Copyrights 2023 Eama <br />
                   All rights reserved.
-                </p>
+                </p> */}
               </div>
             </Col>
             <Col xs={24} sm={12} lg={6}>
@@ -94,17 +94,12 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link href="/customers">
-                      <a>Customers</a>
+                      <a>Our Clients</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/request-qutation">
-                      <a>Request-qutation</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/careers">
-                      <a>Careers</a>
+                      <a>Request Qutation</a>
                     </Link>
                   </li>
                 </ul>
@@ -116,17 +111,22 @@ export default function Footer() {
                 <ul>
                   <li>
                     <Link href="/blog">
-                      <a>Blog</a>
+                      <a>Our News</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/previous-compains">
+                      <a>Previous Capaigns</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/bilboard">
+                      <a>Our Locations</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact-us">
                       <a>Contact Us</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/bilboard">
-                      <a>Bilboard</a>
                     </Link>
                   </li>
                 </ul>

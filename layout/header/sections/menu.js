@@ -84,17 +84,17 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/blog">
-                  <a>Our Blog</a>
+                  <a>Our News</a>
                 </Link>
               </li>
-              <li
+              {/* <li
                 className={router.pathname === "/news" ? "active" : ""}
                 onClick={onClose}
               >
                 <Link href="/news">
                   <a>News</a>
                 </Link>
-              </li>
+              </li> */}
               <li
                 className={
                   router.pathname.includes("/bilboard") ? "active" : ""
@@ -113,7 +113,7 @@ const Menue = () => {
                 onClick={onClose}
               >
                 <Link href="/previous-compains">
-                  <a>Previous Campaign</a>
+                  <a>Previous Campaigns</a>
                 </Link>
               </li>
               <li
