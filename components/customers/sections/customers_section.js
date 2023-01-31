@@ -8,7 +8,7 @@ export const Customers_section = () => {
   return (
     <div className="customersSection container_">
       <div className="topHeading">
-        <span className="subTitle"> {customers.client_section.subtitle}</span>
+        {/* <span className="subTitle"> {customers.client_section.subtitle}</span> */}
         <h1 className="mainHeading">{customers.client_section.title}</h1>
       </div>
       <Row>

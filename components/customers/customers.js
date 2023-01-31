@@ -21,13 +21,13 @@ export const CustomersComponent = () => {
   return (
     <div className={style.customers}>
       <PageHeading_section data={customers.cover_section} />
+      <Customers_section />
       <div className="container_  ">
         <Testimonials_section
           titleData={customers.testimonial_section}
           data={customers.testimonials}
         />
       </div>
-      <Customers_section />
     </div>
   );
 };

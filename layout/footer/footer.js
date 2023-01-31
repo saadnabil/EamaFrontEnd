@@ -46,12 +46,12 @@ export default function Footer() {
           <Row>
             <Col xs={24} lg={12}>
               <div className="left container_">
-                <h2 className="mainHeading">WANT TO WORK WITH US?</h2>
+                <h2 className="mainHeading">Contact Us</h2>
               </div>
             </Col>
             <Col xs={24} lg={12}>
               <div className="right container_">
-                <h3>CONTACT US</h3>
+                {/* <h3>CONTACT US</h3> */}
                 {footer.contact?.map((item) => (
                   <p key={item.id}>{item.value}</p>
                 ))}
@@ -76,7 +76,7 @@ export default function Footer() {
             </Col>
             <Col xs={24} sm={12} lg={6}>
               <div className="footerUl">
-                <h4 className="footerHeading">LINKS</h4>
+                {/* <h4 className="footerHeading">LINKS</h4> */}
                 <ul>
                   <li>
                     <Link href="/">
@@ -89,7 +89,7 @@ export default function Footer() {
 
                   <li>
                     <Link href="/about">
-                      <a>About</a>
+                      <a>Why Eama</a>
                     </Link>
                   </li>
                   <li>
@@ -112,7 +112,7 @@ export default function Footer() {
             </Col>
             <Col xs={24} sm={12} lg={6}>
               <div className="footerUl">
-                <h4 className="footerHeading">LINKS</h4>
+                {/* <h4 className="footerHeading">LINKS</h4> */}
                 <ul>
                   <li>
                     <Link href="/blog">
