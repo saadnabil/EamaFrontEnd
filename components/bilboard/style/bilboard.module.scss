@@ -1,3 +1,5 @@
+@import'_mixins';
+
 .bilboard :global {
     margin-bottom: 100px;
      .bilboardCard {
@@ -32,6 +34,10 @@
                     color: #fff;
                     font-size: 32px;
                     font-weight: bold;
+
+                    @include small {
+                        font-size: 25px;
+                    }
                 }
             }
         }

@@ -13,9 +13,7 @@ export const OurProjects_section = () => {
         <Image src="/photos/home/bgOurProjcets.jpg" layout="fill" alt="bg" />
         <div className="headingContent">
           {/* <span className="subTitle">{ourProjects?.subtitle}</span> */}
-          <h3 className="mainHeading">
-            {ourProjects?.title} <span>.</span>
-          </h3>
+          <h3 className="mainHeading">{ourProjects?.title}</h3>
         </div>
       </div>
       <div className="content container_">
