@@ -68,10 +68,10 @@ export default function Footer() {
                     <Image src={"/images/logo.png"} width={158} height={54} />
                   </a>
                 </Link>
-                {/* <p>
+                <p>
                   © Copyrights 2023 Eama <br />
                   All rights reserved.
-                </p> */}
+                </p>
               </div>
             </Col>
             <Col xs={24} sm={12} lg={6}>
@@ -98,13 +98,13 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/bilboard">
-                      <a>Our Locations</a>
+                    <Link href="/previous-compains">
+                      <a>Previous Campaigns </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/previous-compains">
-                      <a>Previous Capaigns </a>
+                    <Link href="/bilboard">
+                      <a>Our Locations</a>
                     </Link>
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ export default function Footer() {
                 <ul>
                   <li>
                     <Link href="/request-qutation">
-                      <a>Request Qutation</a>
+                      <a>Request quotations</a>
                     </Link>
                   </li>
                   <li>
@@ -192,7 +192,7 @@ export default function Footer() {
             </Col>
           </Row>
         </div>
-        <div className="bottomFooter">© 2022, Eama. All rights reserved</div>
+        {/* <div className="bottomFooter">© 2022, Eama. All rights reserved</div> */}
       </footer>
     </>
   );
