@@ -57,15 +57,25 @@ export const ContactInfo_section = () => {
                   <Link href={item.link}>
                     <a>
                       {item.type === "facebook" ? (
-                        <FaFacebookF />
+                        <span className="facebook">
+                          <FaFacebookF />
+                        </span>
                       ) : item.type === "twitter" ? (
-                        <AiOutlineTwitter />
+                        <span className="twitter">
+                          <AiOutlineTwitter />
+                        </span>
                       ) : item.type === "youtube" ? (
-                        <FaYoutube />
+                        <span className="youtube">
+                          <FaYoutube />
+                        </span>
                       ) : item.type === "instagram" ? (
-                        <BsInstagram />
+                        <span className="instagram">
+                          <BsInstagram />
+                        </span>
                       ) : item.type === "linkedin" ? (
-                        <FaLinkedinIn />
+                        <span className="linkedin">
+                          <FaLinkedinIn />
+                        </span>
                       ) : (
                         ""
                       )}

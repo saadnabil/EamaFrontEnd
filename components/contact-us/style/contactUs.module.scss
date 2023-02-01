@@ -50,6 +50,34 @@
                         display: flex;
                         align-items: center;
                         gap: 10px;
+
+                        .facebook {
+                            display: flex;
+                            svg {
+                                color: #4267B2;
+                            }
+                        }
+
+                        .twitter {
+                            display: flex;
+                            svg {
+                                color: #1DA1F2;
+                            }
+                        }
+
+                        .instagram {
+                            display: flex;
+                            svg {
+                                color: #E1306C;
+                            }
+                        }
+
+                        .linkedin {
+                            display: flex;
+                            svg {
+                                color: #0077B5;
+                            }
+                        }
                     }
                 }
             }
