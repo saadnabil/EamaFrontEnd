@@ -85,7 +85,7 @@ export const LeaveMassage_form = () => {
             </Form.Item>
           </Col>
         </Row>
-        <ButtonsS1 text="send massage" type="submit" />
+        <ButtonsS1 text="send message" type="submit" />
       </Form>
     </div>
   );

@@ -16,7 +16,7 @@ const BilbaordPage = () => {
   return (
     <div>
       <Head>
-        <title>{bilboard.seo_section.meta_title}</title>
+        <title>{bilboard.seo_section?.meta_title}</title>
         <meta
           key="description"
           name="description"

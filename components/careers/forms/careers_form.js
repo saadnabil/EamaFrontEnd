@@ -137,17 +137,17 @@ export const Careers_form = () => {
                     Click or drag file to this area to upload
                   </p>
                 </Dragger>
-                <p>* Upload Only .pdf and .docx</p>
+                <p>* Upload Only Pdf and Docx</p>
               </div>
             </Form.Item>
           </Col>
           <Col xs={24} lg={24}>
             <Form.Item name="message">
-              <TextArea placeholder="Your Massage" />
+              <TextArea placeholder="Your Message" />
             </Form.Item>
           </Col>
         </Row>
-        <ButtonsS1 text="send massage" type="submit" />
+        <ButtonsS1 text="send message" type="submit" />
       </Form>
     </div>
   );
