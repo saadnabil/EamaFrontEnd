@@ -3,6 +3,7 @@ import { Contact_form } from "./forms/contact_form";
 const { Panel } = Collapse;
 
 export const Contact_section = ({ data }) => {
+  console.log(data);
   return (
     <div
       className="contactSection container_ overlay"
@@ -18,9 +19,7 @@ export const Contact_section = ({ data }) => {
         </Col>
         <Col xs={24} lg={12}>
           <div className="contactForm">
-            <h2>
-              reach out via the <br /> form below
-            </h2>
+            <h2>Email us for any inquiries</h2>
             <Contact_form />
           </div>
         </Col>

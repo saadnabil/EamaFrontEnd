@@ -20,7 +20,7 @@ export const Customers_swiper = ({ data }) => {
     },
 
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 40,
     },
   };
@@ -33,7 +33,7 @@ export const Customers_swiper = ({ data }) => {
         navigation={true}
         modules={[Navigation, Autoplay]}
         autoplay={{
-          delay: 3500,
+          delay: 1500,
           disableOnInteraction: false,
         }}
         className="mySwiper"

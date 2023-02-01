@@ -9,9 +9,7 @@ export const OurServices_section = () => {
     <div className="ourServices container_">
       <div className="heading">
         {/* <span>WHAT WE DO</span> */}
-        <h3 className="mainHeading">
-          OUR SERVICES <span>.</span>
-        </h3>
+        <h3 className="mainHeading">OUR SERVICES</h3>
       </div>
       <Row gutter={30}>
         {index.services?.map((service, i) => (

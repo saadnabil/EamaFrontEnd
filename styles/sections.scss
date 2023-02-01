@@ -339,7 +339,7 @@
     background-size: cover;
     position: relative;
     .contactContent {
-        background: #fff;
+        background: $c-p;
         padding: 70px 50px;
         height: 100%;
         display: flex;
@@ -357,7 +357,7 @@
         }
 
         h2 {
-            color: #161619;
+            color: #fff;
             margin: 20px 0 40px;
             font-size: 50px;
             font-weight: 900;
@@ -384,7 +384,7 @@
     }
 
     .contactForm {
-        background: $c-p;
+        background: #fff;
         margin: 100px 0;
         padding: 40px;
         position: relative;
@@ -395,21 +395,27 @@
             font-weight: 800;
             text-transform: uppercase;
             line-height: 37px;
-            color: #fff;
+            color: $c-p;
             margin-bottom: 30px;
         }
 
         input,
         textarea,
         .ant-input {
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #fff;
+            // background: transparent;
+            // border: none;
+            // border-bottom: 1px solid #eaeaea;
             outline: none;
             box-shadow: none;
-            color: #fff;
+            // color: #fff;
             margin-bottom: 10px;
             padding-left: 0;
+            border-radius: 5px;
+            padding: 10px;
+
+            &::placeholder {
+                color: #dacccc;
+            }
         }
 
         textarea {
@@ -425,6 +431,7 @@
         .contactBtn {
             border: 1px solid #fff;
             margin-top: 30px;
+            
         }
     }
 }

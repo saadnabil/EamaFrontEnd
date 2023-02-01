@@ -27,9 +27,7 @@ export const OutDoor_section = () => {
         </Col>
         <Col xs={24} lg={12}>
           <div className="right">
-            <h3 className="mainHeading">
-              {index.video_section?.title} <span>.</span>
-            </h3>
+            <h3 className="mainHeading">{index.video_section?.title}</h3>
             <p>{index.video_section?.descrition}</p>
 
             {/* <div className="showVideo" onClick={() => setOpen(true)}>

@@ -47,39 +47,14 @@ function HeaderApp() {
               </li>
               <li
                 className={
-                  router.pathname === "/request-qutation" ? "active" : ""
-                }
-              >
-                <Link href="/request-qutation">
-                  <a>Request Qutation</a>
-                </Link>
-              </li>
-
-              <li className={router.pathname === "/careers" ? "active" : ""}>
-                <Link href="/careers">
-                  <a>Careers</a>
-                </Link>
-              </li>
-
-              <li className={router.pathname.includes("/blog") ? "active" : ""}>
-                <Link href="/blog">
-                  <a>Our News</a>
-                </Link>
-              </li>
-              {/* <li className={router.pathname === "/news" ? "active" : ""}>
-                <Link href="/news">
-                  <a>News</a>
-                </Link>
-              </li> */}
-              <li
-                className={
                   router.pathname.includes("/previous-compains") ? "active" : ""
                 }
               >
                 <Link href="/previous-compains">
-                  <a>Previous Campaigns</a>
+                  <a>Previous CAMPAIGNS</a>
                 </Link>
               </li>
+
               <li
                 className={
                   router.pathname.includes("/bilboard") ? "active" : ""
@@ -89,6 +64,34 @@ function HeaderApp() {
                   <a>Our Locations</a>
                 </Link>
               </li>
+
+              <li
+                className={
+                  router.pathname === "/request-qutation" ? "active" : ""
+                }
+              >
+                <Link href="/request-qutation">
+                  <a>Request Qutation</a>
+                </Link>
+              </li>
+
+              <li className={router.pathname.includes("/blog") ? "active" : ""}>
+                <Link href="/blog">
+                  <a> News</a>
+                </Link>
+              </li>
+
+              <li className={router.pathname === "/careers" ? "active" : ""}>
+                <Link href="/careers">
+                  <a>Careers</a>
+                </Link>
+              </li>
+
+              {/* <li className={router.pathname === "/news" ? "active" : ""}>
+                <Link href="/news">
+                  <a>News</a>
+                </Link>
+              </li> */}
 
               <li className={router.pathname === "/contact-us" ? "active" : ""}>
                 <Link href="/contact-us">

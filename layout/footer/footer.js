@@ -98,8 +98,13 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/request-qutation">
-                      <a>Request Qutation</a>
+                    <Link href="/bilboard">
+                      <a>Our Locations</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/previous-compains">
+                      <a>Previous Capaigns </a>
                     </Link>
                   </li>
                 </ul>
@@ -110,18 +115,18 @@ export default function Footer() {
                 {/* <h4 className="footerHeading">LINKS</h4> */}
                 <ul>
                   <li>
+                    <Link href="/request-qutation">
+                      <a>Request Qutation</a>
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/blog">
-                      <a>Our News</a>
+                      <a>News</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/previous-compains">
-                      <a>Previous Capaigns</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/bilboard">
-                      <a>Our Locations</a>
+                    <Link href="/careers">
+                      <a>Careers</a>
                     </Link>
                   </li>
                   <li>
@@ -134,7 +139,7 @@ export default function Footer() {
             </Col>
             <Col xs={24} md={24} lg={5}>
               <div className="socail">
-                <h4 className="footerHeading">SUBSCRIBE</h4>
+                <h4 className="footerHeading"> Newsletter Subscription</h4>
                 <Form
                   name="basic"
                   onFinish={onFinish}

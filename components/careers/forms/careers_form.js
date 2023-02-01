@@ -106,10 +106,15 @@ export const Careers_form = () => {
               ]}
             >
               <Select placeholder="Your Career Type">
-                <Option value="Internship">Internship</Option>
-                <Option value="Fresh graduate">Fresh graduate</Option>
-                <Option value="Experienced">Experienced</Option>
-                <Option value="Professional">Professional</Option>
+                <Option value="Sales">Sales</Option>
+                <Option value="Admin">Admin</Option>
+                <Option value="Accounting">Accounting</Option>
+                <Option value="Finance">Finance</Option>
+                <Option value="Operations">Operations</Option>
+                <Option value="IT">IT</Option>
+                <Option value="Marketing">Marketing</Option>
+                <Option value="Graphic design">Graphic design</Option>
+                <Option value="Other">Other</Option>
               </Select>
             </Form.Item>
           </Col>
@@ -132,6 +137,7 @@ export const Careers_form = () => {
                     Click or drag file to this area to upload
                   </p>
                 </Dragger>
+                <p>* Upload Only .pdf and .docx</p>
               </div>
             </Form.Item>
           </Col>

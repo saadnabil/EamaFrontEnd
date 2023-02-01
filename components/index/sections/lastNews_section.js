@@ -8,7 +8,7 @@ export const LastNews_section = ({ data, titleData }) => {
       <div className="heading">
         {/* <span className="subTitle">{titleData?.subtitle}</span> */}
         <h3 className="mainHeading">
-          {titleData?.title} <span>.</span>
+          {titleData?.title}
         </h3>
       </div>
       <LastNews_swiper data={data} />

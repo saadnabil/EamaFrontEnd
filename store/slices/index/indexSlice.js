@@ -33,11 +33,9 @@ export const indexSlice = createSlice({
     [getIndexPage.fulfilled]: (state, action) => {
       state.index = action?.payload.data;
       state.loading = false;
-      console.log(action.payload, "action");
     },
 
     [HYDRATE]: (state, action) => {
-      console.log(action.payload.index);
       state.index = action.payload.index.index;
     },
   },

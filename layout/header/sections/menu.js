@@ -59,42 +59,18 @@ const Menue = () => {
                   <a>Our Clients</a>
                 </Link>
               </li>
+
               <li
                 className={
-                  router.pathname === "/request-qutation" ? "active" : ""
+                  router.pathname.includes("/previous-compains") ? "active" : ""
                 }
                 onClick={onClose}
               >
-                <Link href="/request-qutation">
-                  <a>Request Quotation</a>
+                <Link href="/previous-compains">
+                  <a>Previous Campaigns</a>
                 </Link>
               </li>
 
-              <li
-                className={router.pathname === "/careers" ? "active" : ""}
-                onClick={onClose}
-              >
-                <Link href="/careers">
-                  <a>Careers</a>
-                </Link>
-              </li>
-
-              <li
-                className={router.pathname.includes("/blog") ? "active" : ""}
-                onClick={onClose}
-              >
-                <Link href="/blog">
-                  <a>Our News</a>
-                </Link>
-              </li>
-              {/* <li
-                className={router.pathname === "/news" ? "active" : ""}
-                onClick={onClose}
-              >
-                <Link href="/news">
-                  <a>News</a>
-                </Link>
-              </li> */}
               <li
                 className={
                   router.pathname.includes("/bilboard") ? "active" : ""
@@ -108,14 +84,42 @@ const Menue = () => {
 
               <li
                 className={
-                  router.pathname.includes("/previous-compains") ? "active" : ""
+                  router.pathname === "/request-qutation" ? "active" : ""
                 }
                 onClick={onClose}
               >
-                <Link href="/previous-compains">
-                  <a>Previous Campaigns</a>
+                <Link href="/request-qutation">
+                  <a>Request Quotation</a>
                 </Link>
               </li>
+
+              <li
+                className={router.pathname.includes("/blog") ? "active" : ""}
+                onClick={onClose}
+              >
+                <Link href="/blog">
+                  <a>News</a>
+                </Link>
+              </li>
+
+              <li
+                className={router.pathname === "/careers" ? "active" : ""}
+                onClick={onClose}
+              >
+                <Link href="/careers">
+                  <a>Careers</a>
+                </Link>
+              </li>
+
+              {/* <li
+                className={router.pathname === "/news" ? "active" : ""}
+                onClick={onClose}
+              >
+                <Link href="/news">
+                  <a>News</a>
+                </Link>
+              </li> */}
+
               <li
                 className={router.pathname === "/contact-us" ? "active" : ""}
                 onClick={onClose}

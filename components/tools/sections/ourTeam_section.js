@@ -9,9 +9,7 @@ export const OurTeam_section = ({ data, titleData }) => {
     >
       <div className="heading">
         {/* <span className="subTitle">{titleData?.subtitle}</span> */}
-        <h3 className="mainHeading">
-          {titleData?.title} <span>.</span>
-        </h3>
+        <h3 className="mainHeading">{titleData?.title}</h3>
       </div>
       <Row gutter={40}>
         {data?.map((teamMember, i) => (

@@ -16,7 +16,7 @@ const ContactUsPage = () => {
   return (
     <div>
       <Head>
-        <title>{contact.seo_section.meta_title}</title>
+        <title>{contact.seo_sectio?.meta_title}</title>
         <meta
           key="description"
           name="description"

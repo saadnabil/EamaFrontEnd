@@ -95,6 +95,7 @@ export const RequestQutation_form = () => {
               <DatePicker
                 onChange={(date, dateStrin) => setStartDate(dateStrin)}
                 format="YYYY/MM/DD"
+                placeholder="Start date"
               />
             </Form.Item>
           </Col>
@@ -111,6 +112,7 @@ export const RequestQutation_form = () => {
               <DatePicker
                 onChange={(date, dateStrin) => setEndDate(dateStrin)}
                 format="YYYY/MM/DD"
+                placeholder="End date"
               />
             </Form.Item>
           </Col>
