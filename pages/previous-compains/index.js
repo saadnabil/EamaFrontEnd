@@ -18,16 +18,16 @@ const PreviousCompainsPage = () => {
   return (
     <div>
       <Head>
-        <title>{previousCompains.seo_section.meta_title}</title>
+        <title>{previousCompains.seo_section?.meta_title}</title>
         <meta
           key="description"
           name="description"
-          content={previousCompains.seo_section.meta_description}
+          content={previousCompains.seo_section?.meta_description}
         />
         <meta
           key="keywords"
           name="keywords"
-          content={previousCompains.seo_section.meta_tag.map(
+          content={previousCompains.seo_section?.meta_tag.map(
             (tag) => `${tag}, `
           )}
         />

@@ -20,12 +20,12 @@ const BilbaordPage = () => {
         <meta
           key="description"
           name="description"
-          content={bilboard.seo_section.meta_description}
+          content={bilboard.seo_section?.meta_description}
         />
         <meta
           key="keywords"
           name="keywords"
-          content={bilboard.seo_section.meta_tag.map((tag) => `${tag}, `)}
+          content={bilboard.seo_section?.meta_tag.map((tag) => `${tag}, `)}
         />
       </Head>
       <BilboardComponent />

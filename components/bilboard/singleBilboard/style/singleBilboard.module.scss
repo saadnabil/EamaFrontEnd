@@ -29,6 +29,10 @@
             background-size: cover;
             height: 320px;
             margin-bottom: 10px;
+
+            @include small {
+                height: 200px;
+            }
         }
 
         .imgTitle {
