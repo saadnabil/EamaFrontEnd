@@ -11,7 +11,7 @@ export const PreviousCompainsComponent = () => {
   const { previousCompains } = useSelector(
     ({ previousCompains }) => previousCompains
   );
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   // useEffect(() => {
   //   dispatch(getPreviousCompainsPage());
