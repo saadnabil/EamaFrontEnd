@@ -9,15 +9,11 @@ import style from "./style/customers.module.scss";
 
 export const CustomersComponent = () => {
   const { customers } = useSelector(({ customers }) => customers);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   // useEffect(() => {
   //   dispatch(getCustomersPage());
   // }, []);
-
-  console.log(customers);
-
-  const data = {};
 
   return (
     <div className={style.customers}>
