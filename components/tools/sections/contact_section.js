@@ -18,7 +18,7 @@ export const Contact_section = ({ data }) => {
         </Col>
         <Col xs={24} lg={12}>
           <div className="contactForm">
-            <h2>Email us for any inquiries</h2>
+            <h2>Send Us An Email</h2>
             <Contact_form />
           </div>
         </Col>

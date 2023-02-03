@@ -13,7 +13,7 @@ export const OurProjects_section = () => {
   return (
     <div className="ourProjectsSection">
       <div className="topHeading">
-        <Image src="/photos/home/bgOurProjcets.jpg" layout="fill" alt="bg" />
+        {/* <Image src="/photos/home/bgOurProjcets.jpg" layout="fill" alt="bg" /> */}
         <div className="headingContent">
           {/* <span className="subTitle">{ourProjects?.subtitle}</span> */}
           <h3 className="mainHeading">{ourProjects?.title}</h3>
