@@ -116,7 +116,7 @@ export default function Footer() {
                 <ul>
                   <li>
                     <Link href="/request-qutation">
-                      <a>Request quotations</a>
+                      <a>Request quotation</a>
                     </Link>
                   </li>
                   <li>
