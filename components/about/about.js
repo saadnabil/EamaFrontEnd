@@ -32,7 +32,7 @@ export const AboutComponent = () => {
         />
       </div>
     <Contact_section data={about.faq_section} /> */}
-      <OurTeam_section data={about.team} titleData={about.team_section} />
+      {/* <OurTeam_section data={about.team} titleData={about.team_section} /> */}
       {/* <Customers_section data={about.client} /> */}
     </div>
   );
