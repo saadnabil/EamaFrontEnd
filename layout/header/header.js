@@ -71,7 +71,7 @@ function HeaderApp() {
                 }
               >
                 <Link href="/request-qutation">
-                  <a>Request Qutation</a>
+                  <a>Request Quotation</a>
                 </Link>
               </li>
 

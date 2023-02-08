@@ -2,14 +2,15 @@ import { Col, Form, Input, message, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import style from "./footer.module.scss";
-import {
-  AiOutlineTwitter,
-  AiFillYoutube,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { GrFacebookOption } from "react-icons/gr";
+import { AiOutlineTwitter } from "react-icons/ai";
 import { FiSend } from "react-icons/fi";
-import { BsEnvelope, BsInstagram } from "react-icons/bs";
+import {
+  BsEnvelope,
+  BsInstagram,
+  BsFillHouseDoorFill,
+  BsTelephoneFill,
+} from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import {
   footerSubscripeThunk,
@@ -53,7 +54,21 @@ export default function Footer() {
               <div className="right container_">
                 {/* <h3>CONTACT US</h3> */}
                 {footer.contact?.map((item) => (
-                  <p key={item.id}>{item.value}</p>
+                  <p key={item.id} className="flex_">
+                    {item.type === "phone" ? (
+                      <BsTelephoneFill />
+                    ) : item.type === "mobile" ? (
+                      <BsTelephoneFill />
+                    ) : item.type === "email" ? (
+                      <MdEmail />
+                    ) : item.type === "address" ? (
+                      <BsFillHouseDoorFill />
+                    ) : (
+                      ""
+                    )}
+
+                    {item.value}
+                  </p>
                 ))}
               </div>
             </Col>

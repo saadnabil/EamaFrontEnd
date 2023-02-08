@@ -5,22 +5,14 @@ import {
   BsTelephoneFill,
 } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { AiFillClockCircle, AiOutlineTwitter } from "react-icons/ai";
+import { AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import Link from "next/link";
-import GoogleMapReact from "google-map-react";
 
 export const ContactInfo_section = () => {
   const { contact } = useSelector(({ contact }) => contact);
 
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
-    },
-    zoom: 11,
-  };
   return (
     <div className="contactInfo container_">
       <Row gutter={20}>
