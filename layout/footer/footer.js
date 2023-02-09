@@ -16,6 +16,8 @@ import {
   footerSubscripeThunk,
   getLayoutFooter,
 } from "../../store/slices/layout/getLayoutSlice";
+
+import { GiRotaryPhone } from "react-icons/gi";
 import { useEffect } from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
@@ -56,7 +58,7 @@ export default function Footer() {
                 {footer.contact?.map((item) => (
                   <p key={item.id} className="flex_">
                     {item.type === "phone" ? (
-                      <BsTelephoneFill />
+                      <GiRotaryPhone />
                     ) : item.type === "mobile" ? (
                       <BsTelephoneFill />
                     ) : item.type === "email" ? (

@@ -7,6 +7,7 @@ import {
 import { MdEmail } from "react-icons/md";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { GiRotaryPhone } from "react-icons/gi";
 import { useSelector } from "react-redux";
 import Link from "next/link";
 
@@ -23,7 +24,7 @@ export const ContactInfo_section = () => {
               {contact.contact?.map((item) => (
                 <li key={item.id}>
                   {item.type === "phone" ? (
-                    <BsTelephoneFill />
+                    <GiRotaryPhone />
                   ) : item.type === "mobile" ? (
                     <BsTelephoneFill />
                   ) : item.type === "email" ? (
