@@ -34,8 +34,8 @@ export const SinglePreviousCompainsComponent = () => {
               <h1 className="mainHeading">
                 {singlePreviousCompains.campaign?.title}
               </h1>
-              <p>{singlePreviousCompains.campaign?.description}</p>
-              <p className="date">{singlePreviousCompains.campaign?.date}</p>
+              {/* <p>{singlePreviousCompains.campaign?.description}</p> */}
+              <p className="date">{singlePreviousCompains.campaign?.year}</p>
             </div>
           </Col>
           <Col xs={24} lg={12}>
