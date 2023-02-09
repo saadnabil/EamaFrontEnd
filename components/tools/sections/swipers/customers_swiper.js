@@ -10,17 +10,17 @@ export const Customers_swiper = ({ data }) => {
     },
 
     400: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 23,
     },
 
     700: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 40,
     },
 
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 40,
     },
   };
