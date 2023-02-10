@@ -9,7 +9,7 @@ export const RelatedSingle_section = () => {
   );
   return (
     <div className="relatedSingleCompain">
-      <h2 className="mainHeading">Other PREVIOUS CAMPAIGNS</h2>
+      <h2 className="mainHeading">Other previous campaigns</h2>
       <Row gutter={30}>
         {singlePreviousCompains.related_campaign?.map((related) => (
           <Link href={`/previous-compains/${related.id}`}>
