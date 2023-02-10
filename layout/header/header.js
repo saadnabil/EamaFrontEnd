@@ -51,7 +51,7 @@ function HeaderApp() {
                 }
               >
                 <Link href="/previous-compains">
-                  <a>Previous CAMPAIGNS</a>
+                  <a>Previous Campaigns</a>
                 </Link>
               </li>
 

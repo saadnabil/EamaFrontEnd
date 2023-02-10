@@ -26,7 +26,7 @@ export const RequestQutaitonComponent = () => {
               style={{
                 backgroundImage: `url(${quotation?.quotation_section.image})`,
               }}
-            ></div>
+            />
           </Col>
           <Col xs={24} lg={12}>
             <div className="requestQutationContent">

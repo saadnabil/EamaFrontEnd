@@ -22,10 +22,10 @@ export const RequestQutation_form = () => {
     )
       .unwrap()
       .then((res) => {
-        message.success("This is a success message");
+        message.success("Your message was sent successfully");
       })
       .catch((res) => {
-        message.error("This is an error message");
+        message.error("Try It Again");
       });
   };
   const onFinishFailed = (errorInfo) => {

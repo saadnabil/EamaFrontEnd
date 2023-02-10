@@ -10,15 +10,14 @@ export const Contact_form = () => {
     dispatch(contactFormThunk(values))
       .unwrap()
       .then((res) => {
-        message.success("This is a success message");
+        message.success("Your message was sent successfully");
       })
       .catch((res) => {
-        message.error("This is an error message");
+        message.error("Try It Agin");
       });
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
-    message.error("This is an error message");
   };
   return (
     <div>

@@ -8,7 +8,7 @@ export const LeaveMassage_section = () => {
 
   return (
     <div className="leaveMassageSection container_">
-      <Row>
+      <Row className="flexCenter">
         <Col xs={24} lg={12}>
           <div className="imgContainer overlay">
             <Image

@@ -1,7 +1,5 @@
-@import '_variables';
-@import 'node_modules/react-modal-video/scss/modal-video.scss';
-
-
+@import "_variables";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
 
 * {
   margin: 0px;
@@ -10,7 +8,7 @@
 
 html {
   --color-primary: #f90606;
-  --color-second: #5372E7;
+  --color-second: #5372e7;
 
   --color-font-primary: #333;
 
@@ -18,10 +16,10 @@ html {
   --color-bg-second: #ff0;
 
   --c-b-p: #121212;
-  --letter-spacing: .2em;
+  --letter-spacing: 0.2em;
 
-  --f-en:  'Cairo', sans-serif;
-  --f-ar: 'Tajawal', sans-serif;
+  --f-en: "Cairo", sans-serif;
+  --f-ar: "Tajawal", sans-serif;
 
   --height: 821px;
 }
@@ -30,12 +28,11 @@ html:lang(ar) {
   --letter-spacing: 0em;
 }
 
-
 body {
   font-size: 14px;
   font-family: $f-en;
   color: $c-f-p;
-  background: #FFFFFF;
+  background: #ffffff;
   overflow-x: hidden;
 }
 
@@ -69,8 +66,6 @@ a {
   }
 }
 
-
-
 .container_ {
   padding: 0px 100px;
 }
@@ -79,8 +74,6 @@ a {
   min-height: 600px;
   padding-top: 120px;
 }
-
-
 
 .flex_ {
   display: flex;
@@ -107,7 +100,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .flexCenterReverse {
   display: flex;
@@ -122,9 +114,7 @@ a {
   align-items: center;
 }
 
-
 .headSections3 {
-
   h2 {
     font-weight: 700;
     font-size: 30px;
@@ -155,14 +145,11 @@ a {
 }
 
 .headSections {
-
   h2 {
     font-weight: 700;
     font-size: 30px;
     line-height: 38px;
     text-align: center;
-
-
   }
 
   p {
@@ -190,12 +177,11 @@ a {
 }
 
 .inputS1 {
-
   input,
   .ant-picker,
   .ant-input-password {
     padding: 15px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
     border-radius: 15px;
   }
 
@@ -220,9 +206,7 @@ a {
     display: flex;
     align-items: center;
   }
-
 }
-
 
 .pageS1 {
   header {
@@ -242,7 +226,7 @@ a {
     margin-bottom: 80px;
 
     .bg {
-      background: #FAFAFA;
+      background: #fafafa;
       min-height: 269px;
       position: absolute;
       width: 100%;
@@ -253,7 +237,7 @@ a {
     }
 
     .form {
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 15px 50px rgb(0 0 0 / 5%);
       border-radius: 20px;
       max-width: 800px;
@@ -312,7 +296,7 @@ a {
   }
 
   .icon {
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     display: flex;
@@ -342,7 +326,6 @@ a {
 
   li:last-of-type {
     border-bottom: none;
-
   }
 }
 
@@ -350,19 +333,19 @@ a {
   .ant-dropdown-menu {
     border-radius: 10px;
   }
-  .ant-dropdown-menu-item{
+  .ant-dropdown-menu-item {
     padding: 20px;
   }
 }
 
-.mainHeading  {
+.mainHeading {
   font-size: 60px;
   font-weight: 900;
   text-transform: uppercase;
 
   span {
     color: $c-p;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &:hover {
@@ -372,7 +355,7 @@ a {
   }
 }
 
-.NoDataFoundS1{
+.NoDataFoundS1 {
   padding: 20px;
 }
 .mt1 {
@@ -408,22 +391,22 @@ a {
   }
 }
 
-// swiper buttons styll 
+// swiper buttons styll
 .swiper-button-prev,
 .swiper-button-next {
-    color: #161619;
-    border: 1px solid #efefef;
-    width: 38px;
-    font-weight: bold;
-    transition: .3s;
-    &::after {
-      font-size: 17px;
-    }
+  color: #161619;
+  border: 1px solid #efefef;
+  width: 38px;
+  font-weight: bold;
+  transition: 0.3s;
+  &::after {
+    font-size: 17px;
+  }
 
-    &:hover {
-      background: $c-p;
-      border: 1px solid $c-p;
-    }
+  &:hover {
+    background: $c-p;
+    border: 1px solid $c-p;
+  }
 }
 
 .swiper-button-next {
@@ -435,77 +418,73 @@ a {
 }
 
 .form {
-  .ant-picker  {
+  .ant-picker {
     width: 100%;
     border-radius: 5px;
   }
-    .ant-form-item-control  {
-        min-width: 100%;
+  .ant-form-item-control {
+    min-width: 100%;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+
+  textarea {
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+
+  .ButtonsS1 {
+    width: 100%;
+
+    button {
+      min-width: 100%;
+      min-height: 45px;
     }
-    input {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: none;
-    }
+  }
 
-    textarea {
-        height: 150px;
-        border-radius: 5px;
-        box-shadow: none;
-    }
+  .ant-select-selector {
+    min-height: 45px !important;
+    display: flex;
+    align-items: center;
+    border-radius: 5px !important;
+  }
 
-    .ButtonsS1 {
-        width: 100%;
-
-        button {
-            min-width: 100%;
-            min-height: 45px;
-        }
-    }
-
-    .ant-select-selector {
-      height: 45px !important;
-      display: flex;
-      align-items: center;
-      border-radius: 5px !important;
-    }
-
-    .cv {
-      margin-bottom: 30px;
-
-      .ant-upload-drag-icon {
-        span {
-          color: $c-p !important;
-        }
+  .cv {
+    .ant-upload-drag-icon {
+      span {
+        color: $c-p !important;
       }
     }
+  }
 }
 
-@media (max-width:1152px) {
+@media (max-width: 1152px) {
   .container_ {
     padding: 0px 50px;
     transition: 1s;
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .container_ {
     transition: 1s;
     padding: 0px 25px;
   }
 }
 
-
-
 //ant grid
 
 // md
-@media (max-width:992px) {}
-
+@media (max-width: 992px) {
+}
 
 // sm
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .hide-md {
     display: none;
   }
@@ -513,5 +492,4 @@ a {
   .show-md {
     display: block;
   }
-
 }
