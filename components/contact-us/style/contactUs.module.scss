@@ -1,158 +1,158 @@
-@import '_variables';
-@import '_mixins';
+@import "_variables";
+@import "_mixins";
 
 .contactUs :global {
+  margin-bottom: 100px;
+  .contactInfo {
     margin-bottom: 100px;
-    .contactInfo {
-        margin-bottom: 100px;
-        .infoCard {
-            padding: 30px;
-            height: 100%;
-            &.card1 {
-                background: #f9f9f9;
-            }
+    .infoCard {
+      padding: 30px;
+      height: 100%;
+      &.card1 {
+        background: #f9f9f9;
+      }
 
-            &.card2 {
-                box-shadow: 0px 0px 10px 0px rgb(79 79 79 / 10%);
-            }
-            h3 {
-                margin-bottom: 15px;
-                text-transform: capitalize;
-                font-weight: bold;
-                font-size: 20px;
-            }
+      &.card2 {
+        box-shadow: 0px 0px 10px 0px rgb(79 79 79 / 10%);
+      }
+      h3 {
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 20px;
+      }
 
-            p {
-                margin-bottom: 20px;
-            }
+      p {
+        margin-bottom: 20px;
+      }
 
-            ul {
-                li {
-                    margin-bottom: 15px;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
+      ul {
+        li {
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
 
-                    svg {
-                        color: $c-p;
-                    }
-                }
-
-                &.social {
-                    display: flex;
-                    flex-wrap: wrap;
-
-                    li {
-                        width: 50%;
-                    }
-
-                    a {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-
-                        .facebook {
-                            display: flex;
-                            svg {
-                                color: #4267B2;
-                            }
-                        }
-
-                        .twitter {
-                            display: flex;
-                            svg {
-                                color: #1DA1F2;
-                            }
-                        }
-
-                        .instagram {
-                            display: flex;
-                            svg {
-                                color: #E1306C;
-                            }
-                        }
-
-                        .linkedin {
-                            display: flex;
-                            svg {
-                                color: #0077B5;
-                            }
-                        }
-                    }
-                }
-            }
+          svg {
+            color: $c-p;
+          }
         }
 
-        .map {
-            margin-top: 20px;
+        &.social {
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            width: 50%;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .facebook {
+              display: flex;
+              svg {
+                color: #4267b2;
+              }
+            }
+
+            .twitter {
+              display: flex;
+              svg {
+                color: #1da1f2;
+              }
+            }
+
+            .instagram {
+              display: flex;
+              svg {
+                color: #e1306c;
+              }
+            }
+
+            .linkedin {
+              display: flex;
+              svg {
+                color: #0077b5;
+              }
+            }
+          }
         }
+      }
     }
 
-    .leaveMassageSection {
-        margin-bottom: 30px;
-
-        .imgContainer {
-            @include medium {
-                display: none;
-            }
-        }
-
-        .content {
-            background-color: #fff;
-            padding: 60px 50px;
-            box-shadow: 0px 0px 10px 0px rgb(79 79 79 / 10%);
-            margin-left: -100px;
-            margin-top: 70px;
-
-            @include medium {
-                margin-left: 0;
-                padding: 20px 30px;
-            }
-
-            .subTitle {
-                color: $c-p;
-                font-size: 17px;
-                letter-spacing: 4px;
-                text-transform: uppercase;
-            }
-
-            h3 {
-                margin-top: 20px;
-                font-size: 40px;
-                font-weight: 900;
-                text-transform: capitalize;
-            }
-
-            p {
-                margin-bottom: 20px;
-            }
-        }
-
-        .leavMassageForm {
-            .ant-form-item-control  {
-                min-width: 100%;
-            }
-            input {
-                width: 100%;
-                padding: 10px;
-                border-radius: 5px;
-                box-shadow: none;
-            }
-
-            textarea {
-                height: 150px;
-                border-radius: 5px;
-                box-shadow: none;
-            }
-
-            .ButtonsS1 {
-                width: 100%;
-
-                button {
-                    min-width: 100%;
-                    min-height: 45px;
-                }
-            }
-        }
+    .map {
+      margin-top: 20px;
     }
+  }
+
+  .leaveMassageSection {
+    margin-bottom: 30px;
+
+    .imgContainer {
+      @include medium {
+        display: none;
+      }
+    }
+
+    .content {
+      background-color: #fff;
+      padding: 60px 50px;
+      box-shadow: 0px 0px 10px 0px rgb(79 79 79 / 10%);
+      margin-left: -100px;
+      margin-top: 70px;
+
+      @include medium {
+        margin-left: 0;
+        padding: 20px 30px;
+      }
+
+      .subTitle {
+        color: $c-p;
+        font-size: 17px;
+        letter-spacing: 4px;
+        text-transform: capitalize;
+      }
+
+      h3 {
+        margin-top: 20px;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .leavMassageForm {
+      .ant-form-item-control {
+        min-width: 100%;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: none;
+      }
+
+      textarea {
+        height: 150px;
+        border-radius: 5px;
+        box-shadow: none;
+      }
+
+      .ButtonsS1 {
+        width: 100%;
+
+        button {
+          min-width: 100%;
+          min-height: 45px;
+        }
+      }
+    }
+  }
 }

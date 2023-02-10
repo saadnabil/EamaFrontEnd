@@ -1,40 +1,39 @@
-@import 'variables';
+@import "variables";
 
-.ButtonsS1 :global{
-    width: max-content;
+.ButtonsS1 :global {
+  width: max-content;
 
-    button {
-        background: $c-p;
-        box-shadow: none;
-        border: none;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 400;
-        font-size: 20px;
-        min-height: 60px;
-        min-width: 200px;
-        text-transform: uppercase;
-        font-size: 15px;
-        border: 1px solid $c-p;
+  button {
+    background: $c-p;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 20px;
+    min-height: 60px;
+    min-width: 200px;
+    text-transform: capitalize;
+    font-size: 15px;
+    border: 1px solid $c-p;
 
-        &:hover {
-            background-color: transparent;
-            border-color: $c-p;
-            color: $c-p;
-        }
-
-        span {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-        }
-
-        svg {
-            margin: 0px 10px;
-        }
+    &:hover {
+      background-color: transparent;
+      border-color: $c-p;
+      color: $c-p;
     }
 
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    svg {
+      margin: 0px 10px;
+    }
+  }
 }

@@ -23,10 +23,9 @@
       width: 100%;
       h2 {
         color: #fff;
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 800;
-        text-transform: uppercase;
-        line-height: 60px;
+        text-transform: capitalize;
         padding: 120px 0;
       }
     }
@@ -69,7 +68,7 @@
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 40px;
-      // text-transform: uppercase;
+      // text-transform: capitalize;
     }
 
     .ant-row {

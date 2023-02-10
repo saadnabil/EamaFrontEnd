@@ -341,7 +341,7 @@ a {
 .mainHeading {
   font-size: 60px;
   font-weight: 900;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   span {
     color: $c-p;

@@ -1,83 +1,82 @@
-@import '_variables';
-@import '_mixins';
-
+@import "_variables";
+@import "_mixins";
 
 .about :global {
-    .whoAreYouSection {
-        .content {
-            h2 {
-                font-size: 30px;
-                font-weight: 700;
-                position: relative;
-                width: max-content;
-                margin-bottom: 40px;
+  .whoAreYouSection {
+    .content {
+      h2 {
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+        width: max-content;
+        margin-bottom: 40px;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: -170px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    height: 2px;
-                    width: 155px;
-                    background-color: $c-p;
-                }
-            }
-            p {
-                margin-bottom: 40px;
-                width: 90%;
-                line-height: 1.8em;
-            }
+        &::after {
+          content: "";
+          position: absolute;
+          right: -170px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 2px;
+          width: 155px;
+          background-color: $c-p;
         }
-
-        .cards {
-            position: relative;
-            bottom: 120px;
-
-            @include medium {
-                top: 0;
-            }
-            
-            .card {
-                padding: 20px;
-                background-color: #fff;
-                h3 {
-                    font-size: 18px;
-                    font-weight: 700;
-                    line-height: 28px;
-                    text-transform: uppercase;
-                }
-
-                p {
-                    line-height: 1.8em;
-                }
-            }
-        }
+      }
+      p {
+        margin-bottom: 40px;
+        width: 90%;
+        line-height: 1.8em;
+      }
     }
 
-    .numbersSection {
-        background: #fff;
-        padding: 80px 100px;
+    .cards {
+      position: relative;
+      bottom: 120px;
 
-        @include medium {
-            padding: 80px 0;
+      @include medium {
+        top: 0;
+      }
+
+      .card {
+        padding: 20px;
+        background-color: #fff;
+        h3 {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 28px;
+          text-transform: capitalize;
         }
 
-        .numberCard {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            span {
-                font-size: 40px;
-                color: $c-p;
-                font-weight: 900;
-            }
-
-            h4 {
-                font-size: 14px;
-                font-weight: 500;
-            }
+        p {
+          line-height: 1.8em;
         }
+      }
     }
+  }
+
+  .numbersSection {
+    background: #fff;
+    padding: 80px 100px;
+
+    @include medium {
+      padding: 80px 0;
+    }
+
+    .numberCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-size: 40px;
+        color: $c-p;
+        font-weight: 900;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
 }
