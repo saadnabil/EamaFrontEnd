@@ -23,7 +23,7 @@ export default function Home() {
         <HeadSection />
         <OurServices_section />
         {/* <SpringBanner_section /> */}
-        {/* <OutDoor_section /> */}
+        <OutDoor_section />
         {/* <Exepert_section data={index.statistic_section_one} /> */}
         {/* <Progress_section /> */}
         <OurProjects_section />

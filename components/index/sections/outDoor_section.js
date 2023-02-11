@@ -9,6 +9,8 @@ export const OutDoor_section = () => {
   const [isOpen, setOpen] = useState(false);
   const { index } = useSelector(({ index }) => index);
 
+  console.log(index.video_section.video_url);
+
   return (
     <div className="outDoorSection container_">
       <Row gutter={60}>
@@ -30,20 +32,20 @@ export const OutDoor_section = () => {
             <h3 className="mainHeading">{index.video_section?.title}</h3>
             <p>{index.video_section?.descrition}</p>
 
-            {/* <div className="showVideo" onClick={() => setOpen(true)}>
+            <div className="showVideo" onClick={() => setOpen(true)}>
               <BsFillPlayFill />
-            </div> */}
+            </div>
           </div>
         </Col>
       </Row>
-      {/* <ModalVideo
-        channel="youtube"
+      <ModalVideo
+        channel="custom"
         autoplay={true}
         isOpen={isOpen}
-        videoId="L61p2uyiMSo"
+        url={index.video_section.video_url}
         // videoUrl={index.video_section?.video_url}
         onClose={() => setOpen(false)}
-      /> */}
+      />
     </div>
   );
 };
