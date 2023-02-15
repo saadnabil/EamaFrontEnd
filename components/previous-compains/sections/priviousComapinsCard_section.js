@@ -15,7 +15,7 @@ export const PreviousComapinsCard_section = ({ data }) => {
       />
       <div className="content">
         <h2>{data?.title}</h2>
-        <h4 className="date">{data?.year}</h4>
+        {/* <h4 className="date">{data?.year}</h4> */}
         <Link href={`/previous-compains/${data?.id}`}>
           <div>
             <ButtonsS1 text="read more" />

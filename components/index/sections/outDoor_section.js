@@ -9,8 +9,6 @@ export const OutDoor_section = () => {
   const [isOpen, setOpen] = useState(false);
   const { index } = useSelector(({ index }) => index);
 
-  console.log(index.video_section.video_url);
-
   return (
     <div className="outDoorSection container_">
       <Row gutter={60}>
@@ -42,7 +40,7 @@ export const OutDoor_section = () => {
         channel="custom"
         autoplay={true}
         isOpen={isOpen}
-        url={index.video_section.video_url}
+        url={index.video_section?.video_url}
         // videoUrl={index.video_section?.video_url}
         onClose={() => setOpen(false)}
       />

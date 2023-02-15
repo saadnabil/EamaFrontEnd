@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
 import { BsSave2 } from "react-icons/bs";
@@ -26,6 +26,8 @@ export const LastNews_swiper = ({ data }) => {
       spaceBetween: 40,
     },
   };
+
+  console.log(data);
   return (
     <div className="lastNewsSwiper">
       <Swiper
@@ -33,10 +35,15 @@ export const LastNews_swiper = ({ data }) => {
         // loop={true}
         loopFillGroupWithBlank={true}
         navigation={true}
-        modules={[Navigation]}
         className="mySwiper"
         breakpoints={breakpoints}
         speed={1000}
+        loop={true}
+        modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
       >
         {data?.map((slider, i) => (
           <SwiperSlide key={i}>
@@ -48,7 +55,7 @@ export const LastNews_swiper = ({ data }) => {
             >
               <div className="content">
                 <div className="date">
-                  30 <br /> <span>Dec</span>
+                  {slider.day} <br /> <span>{slider.month}</span>
                 </div>
                 <div className="title">{slider.title} </div>
 
