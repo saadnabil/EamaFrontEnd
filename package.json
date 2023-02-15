@@ -6,7 +6,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "production" : "next start -p 8000"
+    "production": "next start -p 8000"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^34.2.0",
@@ -20,11 +20,11 @@
     "next": "^12.3.4",
     "next-redux-wrapper": "^7.0.5",
     "next-translate": "^1.5.0",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-animated-text-content": "^1.0.1",
     "react-cookie": "^4.1.1",
     "react-countup": "^6.4.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-modal-image": "^2.6.0",
     "react-modal-video": "^1.2.10",
@@ -32,10 +32,11 @@
     "react-reveal": "^1.2.2",
     "react-scroll-trigger": "^0.6.14",
     "recharts": "^2.3.2",
-    "redux": "^4.2.0",
+    "redux": "^4.2.1",
     "sass": "^1.53.0",
     "swiper": "^8.3.1",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "video-react": "^0.16.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",

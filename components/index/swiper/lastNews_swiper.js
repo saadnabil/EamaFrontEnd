@@ -32,14 +32,13 @@ export const LastNews_swiper = ({ data }) => {
     <div className="lastNewsSwiper">
       <Swiper
         slidesPerGroup={1}
-        // loop={true}
         loopFillGroupWithBlank={true}
         navigation={true}
         className="mySwiper"
         breakpoints={breakpoints}
         speed={1000}
-        loop={true}
-        modules={[Navigation, Autoplay]}
+        // loop={true}
+        modules={[Navigation]}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
