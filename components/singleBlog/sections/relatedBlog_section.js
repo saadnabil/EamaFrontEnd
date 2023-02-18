@@ -8,7 +8,7 @@ export const RelatedBlog_section = () => {
 
   return (
     <div className="relatedBlogs">
-      <h2 className="mainHeading">Related Blogs</h2>
+      <h2 className="mainHeading">other news</h2>
       <Row gutter={30}>
         {singleBlog.related_blogs?.map((related) => (
           <Link href={`/blog/${related.id}`}>
