@@ -97,10 +97,7 @@ export default function Footer() {
                 <ul>
                   <li>
                     <Link href="/">
-                      <>
-                        <span />
-                        <a>Home</a>
-                      </>
+                      <a>Home</a>
                     </Link>
                   </li>
 
